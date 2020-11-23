@@ -1,0 +1,2014 @@
+/* =========== Begin: 01. Defaul =========== */
+
+@font-face {
+    font-family: Paradise;
+    src: url(../SVN-Last-Paradise.ttf);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: aleo;
+    src: url(../SVN-Aleo.otf);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: God;
+    src: url(../UTM-God.ttf);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: fb;
+    src: url(../UTM-Facebook.ttf);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    background: #ffffff;
+    color: #030201;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 22px;
+    ;
+    max-width: 1920px;
+    margin: auto;
+}
+
+.cus {
+    cursor: pointer;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+a {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    position: relative;
+}
+
+.content-popup::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content-popup::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.content-popup::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.flipster {
+    overflow: hidden!important;
+}
+
+.mouse {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 88;
+    max-width: 10%;
+    width: 2%;
+    -webkit-animation-name: Mousex;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Mouse;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+.show-date {
+    position: fixed;
+    right: 0%;
+    bottom: 2%;
+    z-index: 99;
+    animation: showMenuRight 1.5s ease-in-out forwards;
+    width: 10%;
+}
+
+.fb-like {
+    position: absolute;
+    left: 2%;
+    top: 60%;
+}
+
+
+/* =========== End: Defaul =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin: 02. General =========== */
+
+.pc {
+    display: block;
+}
+
+.mb {
+    display: none;
+}
+
+audio {
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+ul li {
+    cursor: pointer;
+}
+
+#mask {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.9;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 998;
+    display: none;
+}
+
+.zindex {
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    z-index: 10;
+    width: 100%;
+    -webkit-animation: showTitle 1s ease-in-out forwards;
+    animation: showTitle 1s ease-in-out forwards;
+    text-align: center;
+    max-width: 35%;
+    margin: auto;
+}
+
+.ani-up-down01 {
+    -webkit-animation: afigure01 5s linear infinite;
+    animation: figure01 5s linear infinite;
+}
+
+.ani-up-down02 {
+    -webkit-animation: afigure01 5s linear infinite;
+    animation: figure01 5s linear infinite;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+.img_hv img:last-child {
+    display: none;
+}
+
+.img_hv:hover img:first-child {
+    display: none;
+}
+
+.img_hv:hover img:last-child {
+    display: inline-block;
+}
+
+.show-sb {
+    -webkit-animation: show-sb 0.5s ease-in-out forwards;
+    animation: show-sb 0.5s ease-in-out forwards;
+}
+
+.animated_show {
+    -webkit-animation: show_object 1s ease-in-out forwards;
+    animation: show_object 1s ease-in-out forwards;
+}
+
+.animated_logo {
+    -webkit-animation: show_logo 1s ease-in-out forwards;
+    animation: show_logo 1s ease-in-out forwards;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+h1 {
+    font-family: Bira;
+}
+
+.custom-scroll {
+    overflow-y: scroll;
+    height: 24vw;
+    padding-right: 2%;
+}
+
+.custom-scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #786344;
+}
+
+.custom_table {
+    width: 100%;
+    margin: auto;
+    border-collapse: collapse;
+    color: #fff;
+}
+
+.custom_table th,
+.custom_table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.pl-30_und_pr-20 {
+    padding: 0 20px 0 30px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.volume {
+    position: fixed;
+    right: 1.75%;
+    top: 1%;
+    z-index: 999;
+    animation: pulse 1.2s infinite linear;
+}
+
+#volume-play,
+#volume-stop {
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.cloud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(/style/teaser/images/cloud.png) no-repeat center center;
+    background-size: contain;
+}
+
+.cloud.cloud1 {
+    animation: cloud1 30s linear infinite;
+    z-index: -1;
+    opacity: 0.9;
+    animation-delay: 2s;
+    background-position-x: -200px;
+}
+
+.cloud.cloud2 {
+    animation: cloud2 18s linear infinite;
+    z-index: 0;
+    opacity: 0.8;
+    bottom: 0%;
+    background-position-x: -200px;
+    animation-delay: 2s;
+}
+
+.cloud.cloud3 {
+    animation: cloud2 25s linear infinite;
+    z-index: 0;
+    opacity: 1;
+    bottom: -25%;
+    background-position-x: -100px;
+    animation-delay: 0s;
+}
+
+.cloud.cloud4 {
+    animation: cloud1 22s linear infinite;
+    z-index: 0;
+    opacity: 1;
+    bottom: 0;
+    background-position-x: -450px;
+    animation-delay: 0s;
+}
+
+.top.cus {
+    position: fixed;
+    right: 3%;
+    bottom: 5%;
+    z-index: 22;
+    max-width: 10%;
+    width: 6%;
+    -webkit-animation-name: Mousex;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Mouse;
+    -moz-animation-duration: 1s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+
+/* =========== End: General =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin: 03. Logo =========== */
+
+.logo {
+    position: absolute;
+    left: 16%;
+    top: 1%;
+    transform: translate(-50%, 0);
+    z-index: 100;
+    max-width: 20%;
+    width: 12%;
+    outline: unset;
+    border: unset;
+}
+
+.logo-animate {
+    animation: pulse 1.2s infinite linear;
+}
+
+.gift-code {
+    position: fixed;
+    left: 2%;
+    bottom: 2%;
+    width: 7%;
+    z-index: 99;
+    cursor: pointer;
+    animation: showMenuLeft 1.5s ease-in-out forwards;
+}
+
+
+/* =========== End: Logo =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin: 04. Page01 Info =========== */
+
+.page01-info {
+    background: url(/style/teaser/images/bg-01.jpg) no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    width: 100%;
+    z-index: 3;
+    position: relative;
+}
+
+.page01-info video {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: transparent;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover;
+    z-index: 5;
+}
+
+#video_popup-youtube-player {
+    height: 44.5vw;
+}
+
+
+/* =========== End: Page01 Info =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin: 05. Page02 Phuc Loi =========== */
+
+.page02 {
+    background: url(/style/teaser/images/bg-02.png) no-repeat center top;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    padding: 0;
+    margin-top: -8.25%;
+    position: relative;
+    height: auto;
+    z-index: 5;
+    height: 61vw;
+}
+
+.page02 .title {
+    margin: 7.5% 0% 0% 52%;
+}
+
+.page02 .title img {
+    transition: 0.5s linear;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.page02 .title img:hover {
+    transition: 0.5s linear;
+    transform: scale(1.05);
+}
+
+.page02-list {
+    margin-top: -3%;
+}
+
+.page02-list ul {
+    width: 65%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.page02-list ul li {
+    display: inline-block;
+    max-width: 30%;
+    cursor: pointer;
+    width: 30%;
+}
+
+.page02-list ul li {
+    transition: 0.5s linear;
+    transform: translateY(0%);
+}
+
+.page02-list ul li:hover {
+    transition: 0.5s linear;
+    transform: translateY(-2.5%);
+}
+
+
+/* popup page 02 */
+
+.popup-page02-01,
+.popup-page02-02,
+.popup-page02-03,
+.popup-page02-04,
+.popup-page02-05,
+.popup-page02-06,
+.popup-page02-07,
+.popup-page02-08,
+.popup-page04-01,
+.popup-page04-02,
+.popup-page04-03 {
+    display: none;
+}
+
+.popup-page02 {
+    background: url(/style/teaser/images/bg-p4.png) no-repeat center center;
+    background-size: 100%;
+    width: 1036px;
+    height: 722px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 100px 60px 82px 50px;
+    z-index: 999999;
+    color: #fff;
+}
+
+.popup-page02 h1 {
+    font-size: 2rem;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-family: Paradise;
+}
+
+.popup-page02 .close-popup {
+    position: absolute;
+    top: -3%;
+    right: -3%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.popup-page02 .content-popup {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 460px;
+}
+
+.popup-page02 .popup-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.ml-15 {
+    margin-left: 15%;
+}
+
+.p2-gif {
+    margin-left: -8%;
+    width: 120%;
+}
+
+.popup-page03 .popup-box::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+.popup-page03 .popup-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #b76a41;
+}
+
+
+/* =========== End: Page02 Phuc Loi =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin : 06. Page 03 Mini Game =========== */
+
+.page03 {
+    background: url(/style/teaser/images/bg-03.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    overflow: hidden;
+    padding: 7% 0 7%;
+    margin-top: -10%;
+    margin-bottom: 0;
+    z-index: 3;
+}
+
+.page03 a,
+.page03 p,
+.page03 span {
+    font-family: Paradise;
+}
+
+.page03 .title {
+    margin: 0% 0% 2% 12%;
+}
+
+.slide-phucloi {
+    width: 55%;
+    margin: auto;
+    position: relative;
+}
+
+.slide-phucloi li {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    position: relative;
+    margin-bottom: 10%;
+}
+
+.slide-phucloi li .img_hv {
+    position: absolute;
+    bottom: -5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.slide-phucloi li:focus {
+    outline: unset;
+}
+
+.slick-slide {
+    border: unset;
+    outline: unset
+}
+
+.slick-slide img {
+    display: block;
+    margin: auto;
+}
+
+.slick-slider button {
+    background: transparent;
+    color: transparent;
+    border: transparent;
+    outline: unset;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.slick-slider .slick-prev {
+    position: absolute;
+    left: -11%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.page03 .slick-slider .slick-prev::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(/style/teaser/images/p3-prev.png) top center no-repeat;
+    width: 5vw;
+    height: 5vw;
+    background-size: contain;
+    cursor: pointer;
+    transform: translateY(-40px);
+}
+
+.slick-slider .slick-next {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.page03 .slick-slider .slick-next::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url(/style/teaser/images/p3-next.png) top center no-repeat;
+    width: 5vw;
+    height: 5vw;
+    background-size: contain;
+    cursor: pointer;
+    transform: translateY(-40px);
+}
+
+
+/* =========== End : Mini Game =========== */
+
+
+/* ================================== */
+
+
+/* =========== Begin : 07. Page04 Slide =========== */
+
+.page04 {
+    background: url(/style/teaser/images/bg-04.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 0% 0 0%;
+    margin-top: -6%;
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+    height: 68vw;
+}
+
+.page04 .title {
+    margin-top: 7.5%;
+}
+
+.p-minigame {
+    position: relative;
+    max-width: 97%;
+    margin: auto;
+    margin-top: -2.5%;
+}
+
+.bg-minigame {
+    /* background: url(/style/teaser/images/bg-p3-house.png) no-repeat center top; */
+    background-size: 100%;
+    width: 60%;
+    max-width: 100%;
+    /* height: 45vw; */
+    margin: -1.25% auto 5%;
+    padding-top: 1%;
+    z-index: 5;
+    position: relative;
+}
+
+.p4-menu_tab {
+    position: absolute;
+    top: 9%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    z-index: 6;
+    max-width: 34%;
+}
+
+.p4-menu_tab ul {
+    /* display: inline; */
+    width: 100%;
+    max-width: 100%;
+}
+
+.p4-menu_tab ul li {
+    display: inline-block;
+    max-width: 19%;
+    width: 50%;
+    transform: translateX(-14px);
+}
+
+.dragon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -43%);
+    max-width: 80%;
+    width: 55%;
+}
+
+.ngoc {
+    position: absolute;
+    bottom: -18%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    max-width: 25%;
+    z-index: 6;
+}
+
+.btn-trieuhoi {
+    position: absolute;
+    bottom: -34%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 50%;
+    width: 20%;
+    z-index: 6;
+}
+
+.btn-trieuhoi-a {
+    position: absolute;
+    bottom: -34%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 50%;
+    width: 20%;
+    z-index: 6;
+}
+
+.btn-login-trieuhoi {
+    position: absolute;
+    bottom: -34%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    max-width: 50%;
+    width: 20%;
+    z-index: 6;
+}
+
+.turn {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #000;
+    border-radius: 12px;
+    padding: 0 5%;
+}
+
+.turn a {
+    color: #e54412;
+    text-decoration-line: none;
+}
+
+.turn a span {
+    color: #fff;
+}
+
+.p4-figureleft {
+    position: absolute;
+    left: 1%;
+    bottom: -14%;
+    width: 22%;
+    z-index: 0;
+}
+
+.p4-figureright {
+    position: absolute;
+    right: 5%;
+    bottom: -17%;
+    z-index: 0;
+    width: 19%;
+}
+
+
+/* =========== End : Page04 Slide =========== */
+
+
+/* =========== Begin : Page05 Timeline =========== */
+
+.page05-timeline {
+    background: url(/style/teaser/images/bg-05.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 0% 0 0%;
+    z-index: 2;
+    position: relative;
+    height: 65vw;
+    margin-top: -10%;
+}
+
+.page05-timeline .zindex {
+    position: unset;
+}
+
+.p5-main-content {
+    position: relative;
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.p5_figure1 {
+    position: absolute;
+    top: 8%;
+    right: -80%;
+    max-width: 100%;
+    z-index: -1;
+    width: 100%;
+}
+
+.p5-date {
+    position: relative;
+    top: 85px;
+    max-width: 80%;
+    width: 28%;
+    margin: 0% 0% 0 30%;
+}
+
+.effect01 {
+    -webkit-animation-name: figure01;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: figure01;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+.effect02 {
+    -webkit-animation-name: figure02;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: figure02;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+.effect-pulse {
+    -webkit-animation-name: pulse;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: pulse;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+.timeline-share {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 6%;
+    margin-right: 1.5%;
+    width: 8%;
+}
+
+.timeline-get {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.timeline-water,
+.timeline-water-active {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    height: 12%;
+    border-radius: 10px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.timeline-water {
+    position: relative;
+    display: table;
+    margin: 7% auto 0;
+    z-index: 1;
+    max-width: 100%;
+    height: 0vw;
+}
+
+.timeline-water-active {
+    content: '';
+    position: absolute;
+    top: 59px;
+    left: 0;
+    background: url(/style/teaser/images/p5-line.png) no-repeat left top;
+    background-size: cover;
+    width: 36%;
+    height: 100%;
+}
+
+.box-timeline {
+    /* width: 950px;
+  max-width: 50%;
+  margin: 0 auto; */
+    width: 100%;
+    max-width: 100%;
+}
+
+.timeline-get ul {
+    position: relative;
+    z-index: 2;
+    width: 105%;
+    text-align: left;
+    top: 150px;
+    left: 10px;
+}
+
+.timeline-get ul li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+    margin: 0 4.5%;
+    position: relative;
+}
+
+.timeline-get ul li a {
+    position: relative;
+    /* display: block; */
+}
+
+.timeline-get ul li a img:last-child {
+    display: none;
+}
+
+.timeline-get ul li.active a img:nth-child(1) {
+    display: none;
+}
+
+.timeline-get ul li.active a img:nth-child(2) {
+    display: block;
+}
+
+.timeline-get ul li:hover .p5-tooltip {
+    display: block;
+}
+
+.timeline-get .p5-tooltip {
+    position: absolute;
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+    width: 200px;
+    /* max-width: 200%; */
+    display: none;
+    top: -180px;
+    left: -35px;
+}
+
+.timeline-get ul li.active a .p5-tooltip img:nth-child(1),
+.timeline-get ul li.active a .p5-tooltip img:nth-child(2),
+.timeline-get ul li a .p5-tooltip img:last-child {
+    display: unset;
+}
+
+
+/* =========== Begin : 08. Clock =========== */
+
+#clock {
+    margin-top: 5%;
+}
+
+#clock span {
+    position: relative;
+    background: url(/style/teaser/images/bg-clock.png) no-repeat center center;
+    width: 159px;
+    height: 159px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 40px;
+    padding-top: 56px;
+    margin: 0 .5%;
+    font-family: fb;
+    color: #ffa21a;
+}
+
+#clock span img {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* =========== End : Clock =========== */
+
+
+/* =========== End : Page05 Timeline =========== */
+
+
+/* ================================== */
+
+
+/* footer */
+
+.footer {
+    background: url(/style/teaser/images/bg-footer.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding: 5% 0 1%;
+    z-index: 4;
+    position: relative;
+    margin-top: -10%;
+}
+
+.footer-container {
+    max-width: 990px;
+    margin: auto;
+    position: relative;
+}
+
+.footer p {
+    line-height: 36px;
+    ;
+}
+
+
+/* end footer */
+
+
+/* ================================== */
+
+
+/* ================================== */
+
+
+/* =========== Begin: 09. Popup =========== */
+
+
+/* ==== Begin: 09.1. Popup Login ==== */
+
+.pop-login {
+    width: 650px;
+    height: 300px;
+    position: fixed;
+    text-align: center;
+    z-index: 99999;
+    display: none;
+    top: 55%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+}
+
+.pop-login-close {
+    position: absolute;
+    top: -100px;
+    left: 80px;
+    width: 10%;
+    height: 9%;
+    cursor: pointer;
+}
+
+.effect-login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99998;
+    display: none;
+}
+
+.effect-login img {
+    /* position: absolute; */
+}
+
+.effect-login img:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.effect-login1 {
+    animation: effect-login1 1s ease-in-out forwards;
+}
+
+.effect-login img:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.effect-login2 {
+    animation: effect-login2 1s ease-in-out forwards;
+}
+
+.effect-login img:nth-child(3) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.effect-login3 {
+    animation: effect-login3 1s ease-in-out forwards;
+}
+
+.effect-login img:nth-child(4) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.effect-login4 {
+    animation: effect-login4 1s ease-in-out forwards;
+}
+
+.login-box .tab {
+    display: none;
+}
+
+.login-box .tab.active {
+    display: block;
+}
+
+.login-menu {
+    max-width: 300px;
+    margin: 0 auto 0%;
+}
+
+.login-menu li {
+    display: inline-block;
+    margin: 0 3px;
+    padding: 3px 5px;
+}
+
+.login-menu li+li {
+    position: relative;
+}
+
+.login-menu li+li:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: url(/style/teaser/images/line.png) no-repeat left top;
+    width: 2px;
+    height: 37px;
+}
+
+.login-menu li a {
+    text-decoration: none;
+    width: 124px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Zeroo;
+}
+
+.login-menu li a:hover,
+.login-menu li.active a {
+    color: #de5608;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+}
+
+.login-box {
+    margin: 0 0 0 150px;
+    max-width: 300px;
+}
+
+.login-box input {
+    background: none;
+    border: 1px solid #fff;
+    padding: 4px 10px;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: #4c0121;
+    color: #fff;
+}
+
+.login-box input::placeholder {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.login-submit {
+    margin-top: 10px;
+}
+
+.social {
+    max-width: 315px;
+    text-align: left;
+    color: #fff;
+    margin: 15px auto 0;
+    border-top: 1px solid #c6a787;
+    padding-top: 15px;
+}
+
+.social li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.social li img {
+    max-width: 30px;
+}
+
+
+/* ==== Begin: 09.2. Popup Defaul + Popup Ket Qua Mini Game ==== */
+
+.popup-ketqua {
+    display: none;
+}
+
+.popup-ketqua .bg-ketqua {
+    background: url(/style/teaser/images/bg-trieuhoi.png) center center no-repeat;
+    background-size: 100%;
+    width: 765px;
+    height: 419px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 130px 60px 0 350px;
+    z-index: 999999;
+    line-height: 28px;
+    font-family: God;
+    text-transform: uppercase;
+    color: #fff;
+    ;
+}
+
+.popup-ketqua .bg-ketqua #ketqua {
+    font-size: 1.5rem;
+    font-weight: 700
+}
+
+.popup-ketqua .bg-ketqua .close-kq {
+    height: 55px;
+    width: 55px;
+    position: absolute;
+    top: 13%;
+    right: 1%;
+    cursor: pointer;
+}
+
+#ketqua-img img {
+    transform: translateY(-15px);
+}
+
+
+/* defaul */
+
+.popup-defaul {
+    background: url(/style/teaser/images/thongbao-bg.png) no-repeat center center;
+    background-size: 100%;
+    width: 765px;
+    height: 419px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 160px 80px 50px 330px;
+    z-index: 999999;
+    line-height: 28px;
+}
+
+.popup-defaul p {
+    font-size: 1.5em;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 36px;
+    ;
+}
+
+.popup-defaul .close-popup {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+.font-face {
+    font-family: Facebook;
+}
+
+.font-zero {
+    font-family: zeroo;
+}
+
+
+/* Doi qua */
+
+.popup-nhancode {
+    background: url(/style/teaser/images/giftcode-bg.png) no-repeat center center;
+    background-size: 100%;
+    width: 1005px;
+    height: 625px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 205px 0px 0px 54px;
+    z-index: 999999;
+    line-height: 28px;
+}
+
+.popup-nhancode .nhancode-02 {
+    display: none;
+    padding: 110px 180px 0 260px;
+}
+
+.popup-doiqua .close-popup,
+.popup-nhancode .close-popup {
+    position: absolute;
+    top: 27%;
+    right: 2%;
+    height: 160px;
+    width: 160px;
+    cursor: pointer;
+}
+
+.popup-doiqua div,
+.popup-nhancode div {
+    font-size: 1.15em;
+    font-family: fb;
+    color: #000;
+    margin: 1% 0;
+}
+
+.popup-nhancode div span {
+    font-family: aleo;
+    margin: unset;
+    font-size: 1em;
+}
+
+.bg-giftcode input,
+.popup-nhancode input {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 2%;
+    border: unset;
+    outline: unset;
+    border-radius: 8px;
+    margin: 1% 0 2% 0;
+    width: 30%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.15rem;
+    font-family: aleo;
+}
+
+.bg-giftcode button {
+    background: transparent;
+    outline: unset;
+    border: unset;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.popup-doiqua .title-popup,
+.popup-nhancode .title-popup {
+    position: absolute;
+    top: -4%;
+    left: 42.5%;
+}
+
+.nhancode-btn {
+    margin: unset!important;
+}
+
+
+/* ==== End: 09.2. Popup Defaul + Popup Ket Qua Mini Game ==== */
+
+
+/* Begin: Popups for page 04 */
+
+.popup-page04 {
+    background: url(/style/teaser/images/bg-p4.png) no-repeat center center;
+    background-size: 100%;
+    width: 1036px;
+    height: 722px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 100px 60px 82px 50px;
+    z-index: 999999;
+    color: #fff;
+}
+
+.popup-page04 .popup-menu {
+    position: absolute;
+    left: -149px;
+    top: 148px;
+    background: url(/style/teaser/images/bg-p4-menu.png) no-repeat top center;
+    padding: 40px;
+}
+
+.popup-page04 .popup-menu li.active a img:nth-child(1) {
+    display: none;
+}
+
+.popup-page04 .popup-menu li.active a img:nth-child(2) {
+    display: block;
+}
+
+.popup-page04 .close-popup {
+    position: absolute;
+    top: -3%;
+    right: -3%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.popup-page04 .popup-box {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 530px;
+}
+
+.popup-page04 .title-popup {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.content-popup table {
+    width: 100%;
+    padding: 15px;
+}
+
+.content-popup table,
+.content-popup th,
+.content-popup td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.popup-page04 .content-table {
+    padding: 35px;
+}
+
+.popup-page04 .popup-box::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+.popup-page04 .popup-box::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+
+.popup-page04 .popup-box::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #b76a41;
+}
+
+.number-doiqua ul li {
+    background: url(/style/teaser/images/bg-ngoc.png) no-repeat top center;
+    background-size: contain;
+    padding: 15px;
+    position: relative;
+}
+
+.content-doiqua ul li .tn-number {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.content-doiqua ul li .dc-img:hover>img {
+    filter: grayscale(100%);
+}
+
+.dc-tooltip {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 2;
+}
+
+.content-doiqua ul li .dc-img:hover .dc-tooltip {
+    display: block;
+}
+
+.content-doiqua ul {
+    display: block;
+}
+
+.content-doiqua ul li {
+    display: inline-flex;
+    position: relative;
+    width: 23%;
+    max-width: 30%;
+}
+
+.content-doiqua .btn-change-code {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.content-doiqua ul li .doiqua-type {
+    position: absolute;
+    left: 22px;
+    top: 22px;
+    width: 35px;
+}
+
+.popup-box .tab {
+    display: none;
+}
+
+.popup-box .tab.active {
+    display: block;
+}
+
+#vid-trieuhoi {
+    display: none;
+    margin: 1.5% 0 0 2.65%;
+    padding: 0.5% 2% 0.5% 2%;
+    background: #000;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-58%, -46%);
+    max-width: 80%;
+    width: 56%;
+}
+
+
+/* End: Popups for page 04 */
+
+
+/* ===== */
+
+
+/* Begin: Popups for page 05 */
+
+.popup-datmoc p,
+.popup-chua-datmoc p {
+    margin: unset
+}
+
+.popup-datmoc input {
+    padding: 5px 15px;
+    text-align: center;
+}
+
+.label-code button {
+    background: transparent;
+    outline: unset;
+    border: unset;
+    margin: 15px;
+    cursor: pointer;
+}
+
+
+/* End: Popups for page 05 */
+
+
+/* ===== */
+
+
+/* ==== End: Popup Login ==== */
+
+
+/* =========== End: Popup =========== */
+
+
+/* ==== Begin: 10. Menu Left ==== */
+
+.effect-left {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 700;
+    max-width: 10%;
+    -webkit-animation: showMenuLeft 2s ease-in-out forwards;
+    -moz-animation: showMenuLeft 2s ease-in-out forwards;
+    animation: showMenuLeft 2s ease-in-out forwards;
+}
+
+.menu-left {
+    background: url(/style/teaser/images/ml.png) no-repeat center bottom;
+    padding-bottom: 72px;
+    padding-top: 42px;
+    animation: totter 3s ease-in-out forwards;
+    animation-iteration-count: infinite;
+}
+
+.menu-left ul {
+    margin-left: 8px;
+}
+
+.menu-left ul li a.active img:first-child {
+    display: none!important;
+}
+
+.menu-left ul li a.active img:last-child {
+    display: block!important;
+}
+
+.menu-left ul li {
+    margin-bottom: 10%;
+    list-style-type: none;
+}
+
+.menu-left ul li a {
+    position: relative;
+    display: block;
+}
+
+
+/* ==== End: 10. Menu Left ==== */
+
+
+/* ==== Begin: 11. Menu Right ==== */
+
+.menu-right {
+    position: fixed;
+    width: 11%;
+    right: 1%;
+    top: 75px;
+    z-index: 99;
+    -webkit-animation: showMenuRight 1.5s ease-in-out forwards;
+    -moz-animation: showMenuRight 1.5s ease-in-out forwards;
+    animation: showMenuRight 1.5s ease-in-out forwards;
+}
+
+.menu-right .mr-aside {
+    background: url(/style/teaser/images/mr-bg.png) no-repeat center top;
+    background-size: 100%;
+    padding-bottom: 20%;
+    z-index: 100;
+    padding-top: 82%;
+    padding-left: 7%;
+    position: relative;
+}
+
+.menu-right .mr-top {
+    cursor: pointer;
+    width: 70%;
+    margin: auto;
+}
+
+.menu-right .mr-menu {
+    position: relative;
+    transform: translate(2%, 0%);
+    max-width: 100%;
+    width: 82%;
+    margin: auto;
+}
+
+.menu-right .mr-menu ul li {
+    margin-top: 4%;
+    display: block;
+}
+
+.menu-right .mr-qr {
+    margin: 11% auto 6%;
+    width: 55%;
+}
+
+.menu-right .mr-txt {
+    margin: auto;
+    width: 65%;
+}
+
+.menu-right .mr-bottom {
+    margin: auto;
+    margin-top: 0%;
+    width: 90%;
+}
+
+.menu-right .mr-bottom ul {
+    width: 72%;
+    margin: auto;
+}
+
+.menu-right .mr-bottom ul li {
+    display: inline-flex;
+    width: 28%;
+}
+
+.mr-bottom {
+    animation: pendulum1 2s cubic-bezier(.57, .07, .47, .84) infinite;
+    transform-origin: top center;
+    position: relative;
+    bottom: 1.75vw;
+    right: -6px;
+    z-index: 111;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* ==== End: 11. Menu Right ==== */
+
+
+/* ==== Begin: 12. Info Login ==== */
+
+.info-login {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    position: fixed;
+    top: 1%;
+    right: 1%;
+    z-index: 99;
+    padding: 4px 50px 4px 12px;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.info-login p {
+    color: #008f9a;
+    margin: unset;
+    display: inline-flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 140px;
+}
+
+.info-login p img {
+    margin-right: 5%;
+    width: 25px;
+    height: 25px;
+    ;
+}
+
+.info-login p span {
+    margin-top: 5px;
+    ;
+}
+
+.info-login a {
+    color: #d24312;
+    position: relative;
+    margin-left: 15px;
+}
+
+.info-login p a:after {
+    content: '|';
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+
+.info-login a:hover {
+    color: #dd251e;
+}
+
+
+/* ==== End: 12. Info Login ==== */
+
+
+/* Popup Code */
+
+.popup-code {
+    background: url(/style/teaser/images/pup_nhanqua.png) no-repeat center center;
+    background-size: 100%;
+    width: 748px;
+    height: 486px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 100px 200px 0px 200px;
+    z-index: 999999;
+    font-family: Aleo;
+    color: #9e2d10;
+    font-weight: 900;
+}
+
+.popup-code input {
+    width: 258px;
+    height: 42px;
+    padding: 8px 14px;
+    font-size: 1.25rem;
+    margin: auto;
+    border-radius: 8px;
+    border: 2px solid #d7af59;
+    color: #9e2d10;
+}
+
+.popup-code .img_hv {
+    max-width: 35%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.popup-code .close-popup {
+    position: absolute;
+    top: 11%;
+    right: 13%;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+}
+
+
+/* ==== Begin: 13. Popup Trailer ==== */
+
+.btn-trailer {
+    position: absolute;
+    top: 40%;
+    right: 45%;
+    width: 7%;
+    height: 12%;
+    cursor: pointer;
+}
+
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    z-index: 999;
+    display: none;
+}
+
+.video-game {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background: #c1c1c1 repeat left top;
+    width: 100%;
+    max-width: 80%;
+    padding: .5%;
+    color: #d3d3d3;
+}
+
+.video-game>div {
+    -webkit-animation: showVideo 0.5s ease-in-out forwards;
+    animation: showVideo 0.5s ease-in-out forwards;
+}
+
+.video-close {
+    position: absolute;
+    right: -30px;
+    top: -40px;
+    z-index: 101;
+    cursor: pointer;
+    width: 5%;
+}
+
+
+/* ==== Begin: 13. Popup Trailer ==== */
+
+
+/* Begin: Popup Tuong */
+
+.popup-tuong {
+    background: url(/style/teaser/images/bg-info-figure.png) no-repeat center center;
+    background-size: 100%;
+    width: 100%;
+    height: 900px;
+    position: fixed;
+    text-align: center;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 0px 200px 0px 200px;
+    z-index: 999999;
+}
+
+.popup-tuong .content-popup {
+    width: 90%;
+    max-width: 73%;
+    margin: auto;
+    padding-left: 6%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+}
+
+.popup-tuong .content-popup h2 {
+    width: 65%;
+    margin: auto;
+}
+
+.popup-tuong .close-popup {
+    position: absolute;
+    top: -5vw;
+    right: 0px;
+    width: 7%;
+    height: 70%;
+    cursor: pointer;
+}
+
+.popup-tuong .mb-4 {
+    margin-bottom: 3%;
+}
+
+.popup-tuong .icon-figure ul {
+    width: 100%;
+    max-width: 100%;
+}
+
+.popup-tuong .icon-figure ul li {
+    display: inline-flex;
+    max-width: 16%;
+    margin: 0 8% 0 0;
+}
+
+.popup-tuong .figure-info {
+    width: 52%;
+}
+
+.popup-tuong .figure-info video {
+    max-width: 75%;
+}
+
+.popup-tuong .figure {
+    width: 47%;
+}

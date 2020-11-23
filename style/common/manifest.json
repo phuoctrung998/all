@@ -1,0 +1,46 @@
+{
+  "short_name": "BetaPage",
+  "name": "BetaPage",
+  "theme_color": "#4A90E2",
+  "background_color": "#F7F8F9",
+  "display": "standalone",
+  "icons": [
+      {  
+   "src": "https://tutienh5.com/style/common/images/android-icon-36x36.png",
+   "sizes": "36-X36",
+   "type": "image/png",
+   "density": "0.75"
+  },
+    {
+      "src": "https://tutienh5.com/style/common/images/android-icon-48x48.png",
+      "type": "image/png",
+      "sizes": "48-X48"
+    },
+    {
+       "src": "https://tutienh5.com/style/common/images/android-icon-72x72.png",
+   "sizes": "72-X72",
+   "type": "image/png",
+   "density": "1.5"
+  },
+
+    {
+    "src": "https://tutienh5.com/style/common/images/android-icon-96x96.png",
+   "sizes": "96-X96",
+   "type": "image/png",
+   "density": "2.0"
+  },
+  {
+   "src": "https://tutienh5.com/style/common/images/android-icon-144x144.png",
+   "sizes": "144-X144",
+   "type": "image/png",
+   "density": "3.0"
+  },
+  {
+   "src": "https://tutienh5.com/style/common/images/android-icon-192x192.png",
+   "sizes": "192-X192",
+   "type": "image/png",
+   "density": "4.0"
+  }
+  ],
+  "start_url": "/"
+}

@@ -1,0 +1,263 @@
+var idleTime = 0;
+var charAutorun ;
+var Char1Pos = [{}, {
+    width: 400,
+    height: 598,
+    left: 550,
+    top: 295
+}, {
+    width: 180,
+    height: 269,
+    left: 45,
+    top: 590
+}, {
+    width: 250,
+    height: 374,
+    left: 280,
+    top: 325
+}];
+var Char2Pos = [{}, {
+    width: 600,
+    height: 645,
+    left: 470,
+    top: 215
+}, {
+    width: 300,
+    height: 276,
+    top: 510,
+    left: 0
+}, {
+    width: 350,
+    height: 327,
+    left: 230,
+    top: 300
+}];
+var Char3Pos = [{}, {
+    width: 400,
+    height: 518,
+    left: 570,
+    top: 385
+}, {
+    width: 230,
+    height: 298,
+    left: 45,
+    top: 570
+}, {
+    width: 280,
+    height: 362,
+    left: 270,
+    top: 350
+}];
+var Char1Name = [{}, {
+
+    left: 545,
+    top: 470
+}, {
+
+    left: 0,
+    top: 527
+}, {
+
+    top: 480,
+    left: 210
+}];
+var Char2Name = [{}, {
+
+    top: 470,
+    left: 545
+}, {
+
+    left: 0,
+    top: 525
+}, {
+
+    top: 480,
+    left: 210
+}];
+var Char3Name = [{}, {
+
+    top: 470,
+    left: 545
+}, {
+
+    left: 0,
+    top: 566
+}, {
+
+    left: 210,
+    top: 480
+}];
+
+jQuery(document).ready(function($) {
+   
+   
+    SetPosition(1, 2, 3, true)
+    charAutorun = setTimeout("AutoCharRun()",4000);
+    $(".CharCuongChien,.CharThanPhap,.CharAmThich,.char-name-cuong-chien,.char-name-than-phap,.char-name-am-thich").mouseover(function(){
+    	 
+    	 clearTimeout(charAutorun);
+    });
+    $(".CharCuongChien,.CharThanPhap,.CharAmThich,.char-name-cuong-chien,.char-name-than-phap,.char-name-am-thich").mouseleave(function(){
+		clearTimeout(charAutorun);
+    	 charAutorun = setTimeout("AutoCharRun()",4000);
+    });
+    var CharAnchor = $(".CharCuongChien,.CharThanPhap,.CharAmThich");
+    CharAnchor.click(function() {
+        var clickPos = $(this).data("pos");
+
+        if (clickPos != 1) {
+            var TempChar1 = $(".Pos1");
+            var TempChar2 = $(".Pos2");
+            var TempChar3 = $(".Pos3");
+            TempChar1.removeClass("Pos1")
+            if (clickPos == 3) {
+                TempChar3.removeClass("Pos3");
+                TempChar3.data("pos", 1);
+
+                TempChar1.removeClass("Pos1");
+                TempChar1.data("pos", 2);
+                
+                TempChar2.removeClass("Pos2");
+                TempChar2.data("pos", 3);
+
+            } else {
+                TempChar2.removeClass("Pos2");
+                TempChar2.data("pos", 1);
+                TempChar3.removeClass("Pos3");
+                TempChar3.data("pos", 2);
+                TempChar1.removeClass("Pos1");
+                TempChar1.data("pos", 3);
+
+            }
+           
+
+            SetPosition($(".CharCuongChien").data("pos"), $(".CharThanPhap").data("pos"), $(".CharAmThich").data("pos"), false)
+
+        }
+
+        return false;
+    });
+    $(".char-name-cuong-chien,.char-name-than-phap,.char-name-am-thich").click(function() {
+        
+        $("." + $(this).data("link-button")).click();
+        return false;
+    });
+    $("#page-3 .ItemIcon").click(function() {
+        if (!$(this).hasClass("Active")) {
+            var tempText = $(this).data("text");
+            var tempIcon = $(this).data("icon");
+            $("#page-3 .ItemIcon").removeClass("Active")
+            $("#page-3 .ItemText").removeClass("Active");
+            $("#page-3 .ItemAvatar").removeClass("Active");
+            
+            $("#page-3 ." + tempText + ",#page-3 ." + tempIcon).addClass("Active");
+            $(this).addClass("Active")
+        }
+        return false;
+
+
+    });
+
+
+
+
+
+})
+
+
+function SetPosition(poschar1, poschar2, poschar3, firstTime) {
+    $(".CharCuongChien,.CharThanPhap,.CharAmThich").removeClass("Pos1");
+    $(".CharCuongChien,.CharThanPhap,.CharAmThich").removeClass("Pos2");
+    $(".CharCuongChien,.CharThanPhap,.CharAmThich").removeClass("Pos3");
+    if (firstTime) {
+        $(".CharCuongChien").css({
+            "width": Char1Pos[poschar1]["width"],
+            "height": Char1Pos[poschar1]["height"],
+            "top": Char1Pos[poschar1]["top"],
+            "left": Char1Pos[poschar1]["left"]
+        });
+        $(".CharThanPhap").css({
+            "width": Char2Pos[poschar2]["width"],
+            "height": Char2Pos[poschar2]["height"],
+            "top": Char2Pos[poschar2]["top"],
+            "left": Char2Pos[poschar2]["left"]
+        });
+        $(".CharAmThich").css({
+            "width": Char3Pos[poschar3]["width"],
+            "height": Char3Pos[poschar3]["height"],
+            "top": Char3Pos[poschar3]["top"],
+            "left": Char3Pos[poschar3]["left"]
+        });
+        $(".char-name-cuong-chien").css({
+
+            "top": Char1Name[poschar1]["top"],
+            "left": Char1Name[poschar1]["left"]
+        });
+        $(".char-name-than-phap").css({
+
+            "top": Char2Name[poschar2]["top"],
+            "left": Char2Name[poschar2]["left"]
+        });
+        $(".char-name-am-thich").css({
+
+            "top": Char3Name[poschar3]["top"],
+            "left": Char3Name[poschar3]["left"]
+        });
+    } else {
+        $(".CharCuongChien").velocity({
+            "width": Char1Pos[poschar1]["width"],
+            "height": Char1Pos[poschar1]["height"],
+            "top": Char1Pos[poschar1]["top"],
+            "left": Char1Pos[poschar1]["left"]
+        }, 500);
+        $(".CharThanPhap").velocity({
+            "width": Char2Pos[poschar2]["width"],
+            "height": Char2Pos[poschar2]["height"],
+            "top": Char2Pos[poschar2]["top"],
+            "left": Char2Pos[poschar2]["left"]
+        }, 500);
+        $(".CharAmThich").velocity({
+            "width": Char3Pos[poschar3]["width"],
+            "height": Char3Pos[poschar3]["height"],
+            "top": Char3Pos[poschar3]["top"],
+            "left": Char3Pos[poschar3]["left"]
+        }, 500);
+        $(".char-name-cuong-chien").velocity({
+            "top": Char1Name[poschar1]["top"],
+            "left": Char1Name[poschar1]["left"]
+        }, 500);
+        $(".char-name-than-phap").velocity({
+            "top": Char2Name[poschar2]["top"],
+            "left": Char2Name[poschar2]["left"]
+        }, 500);
+        $(".char-name-am-thich").velocity({
+            "top": Char3Name[poschar3]["top"],
+            "left": Char3Name[poschar3]["left"]
+        }, 500);
+    }
+    $(".CharCuongChien").addClass("Pos" + poschar1);
+    $(".CharCuongChien").data("pos", poschar1);
+    $(".CharThanPhap").addClass("Pos" + poschar2);
+    $(".CharThanPhap").data("pos", poschar2);
+    $(".CharAmThich").addClass("Pos" + poschar3);
+    $(".CharAmThich").data("pos", poschar3);
+}
+
+function AutoCharRun(){
+	clearTimeout(charAutorun);
+    var tempPosCuongChien =  $(".CharCuongChien").data("pos");
+    switch(tempPosCuongChien) {
+        case 1:
+            SetPosition(2, 3, 1, false);
+            break;
+        case 2:
+            SetPosition(3, 1, 2, false);
+            break;
+        case 3:
+              SetPosition(1, 2, 3, false);
+            break;
+    }
+	
+	charAutorun = setTimeout("AutoCharRun()",4000);
+
+}

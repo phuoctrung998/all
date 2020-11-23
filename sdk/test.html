@@ -1,0 +1,569 @@
+<html lang="en" data-dpr="1" style="font-size: 37.5333px;">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>newworld</title>
+    <link rel="apple-touch-icon" href="https://static.fun2vn.com/public/common/H5/images/h5_icon/desktop_ios/57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://static.fun2vn.com/public/common/H5/images/h5_icon/desktop_ios/72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://static.fun2vn.com/public/common/H5/images/h5_icon/desktop_ios/144.png">
+    <meta name="keywords" content="trò chơi trên web, trò chơi trực tuyến trên web, Fun, Fun game">
+    <meta name="description" content="Bạn có thể tìm thấy các trò chơi trình duyệt thú vị nhất trên Fun2vn, dễ dàng đăng ký, chơi trò chơi mọi lúc, mọi nơi bạn thích.">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://connect.facebook.net/en_US/sdk.js?hash=4a04e8d51bf7a1d07f3bf187c49b5f5e&amp;ua=modern_es6" async="" crossorigin="anonymous"></script>
+    <script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-86201929-5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-86201929-5');
+    </script>
+    <!--禁用360兼容模式-->
+    <meta name="renderer" content="webkit">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- 在iOS上的Safari中启用或禁用自动检测可能的电话号码。 -->
+    <meta name="format-detection" content="telephone = no">
+    <!-- 在 ios 上，设置Web应用程序是否以全屏模式运行。 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="bookmark" href="/favicon.ico">
+    <link rel="stylesheet" href="https://static.fun2vn.com/public/common/H5/css/flexible.debug.css">
+    <script src="https://static.fun2vn.com/public/common/H5/js/flexible.debug.js"></script>
+
+    <link rel="stylesheet" href="https://static.fun2vn.com/public/common/H5/css/swiper.css">
+    <link rel="stylesheet" href="https://static.fun2vn.com/public/common/H5/css/style.css">
+    <link rel="stylesheet" href="https://static.fun2vn.com/public/common/H5/css/extend.css">
+
+    <meta name="__hash__" content="b7c508b2c815c28dee1c87b91cc5edfe_783e83a0fb6962de0f8d190d20a24658">
+    <link rel="stylesheet" href="https://static.fun2vn.com/public/common/js/layer3/theme/default/layer.css?v=3.1.1" id="layuicss-layer">
+    <style type="text/css">
+        .fb_hidden {
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_reposition {
+            overflow: hidden;
+            position: relative
+        }
+        
+        .fb_invisible {
+            display: none
+        }
+        
+        .fb_reset {
+            background: none;
+            border: 0;
+            border-spacing: 0;
+            color: #000;
+            cursor: auto;
+            direction: ltr;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: normal;
+            letter-spacing: normal;
+            line-height: 1;
+            margin: 0;
+            overflow: visible;
+            padding: 0;
+            text-align: left;
+            text-decoration: none;
+            text-indent: 0;
+            text-shadow: none;
+            text-transform: none;
+            visibility: visible;
+            white-space: normal;
+            word-spacing: normal
+        }
+        
+        .fb_reset>div {
+            overflow: hidden
+        }
+        
+        @keyframes fb_transform {
+            from {
+                opacity: 0;
+                transform: scale(.95)
+            }
+            to {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+        
+        .fb_animate {
+            animation: fb_transform .3s forwards
+        }
+        
+        .fb_dialog {
+            background: rgba(82, 82, 82, .7);
+            position: absolute;
+            top: -10000px;
+            z-index: 10001
+        }
+        
+        .fb_dialog_advanced {
+            border-radius: 8px;
+            padding: 10px
+        }
+        
+        .fb_dialog_content {
+            background: #fff;
+            color: #373737
+        }
+        
+        .fb_dialog_close_icon {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+            cursor: pointer;
+            display: block;
+            height: 15px;
+            position: absolute;
+            right: 18px;
+            top: 17px;
+            width: 15px
+        }
+        
+        .fb_dialog_mobile .fb_dialog_close_icon {
+            left: 5px;
+            right: auto;
+            top: 5px
+        }
+        
+        .fb_dialog_padding {
+            background-color: transparent;
+            position: absolute;
+            width: 1px;
+            z-index: -1
+        }
+        
+        .fb_dialog_close_icon:hover {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+        }
+        
+        .fb_dialog_close_icon:active {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+        }
+        
+        .fb_dialog_iframe {
+            line-height: 0
+        }
+        
+        .fb_dialog_content .dialog_title {
+            background: #6d84b4;
+            border: 1px solid #365899;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0
+        }
+        
+        .fb_dialog_content .dialog_title>span {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+            float: left;
+            padding: 5px 0 7px 26px
+        }
+        
+        body.fb_hidden {
+            height: 100%;
+            left: 0;
+            margin: 0;
+            overflow: visible;
+            position: absolute;
+            top: -10000px;
+            transform: none;
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+            min-height: 100%;
+            min-width: 100%;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            z-index: 10001
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered {
+            background: none;
+            height: auto;
+            min-height: initial;
+            min-width: initial;
+            width: auto
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+            width: 100%
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+            background: none
+        }
+        
+        .loading.centered #fb_dialog_loader_close {
+            clear: both;
+            color: #fff;
+            display: block;
+            font-size: 18px;
+            padding-top: 20px
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay {
+            background: rgba(0, 0, 0, .4);
+            bottom: 0;
+            left: 0;
+            min-height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000
+        }
+        
+        #fb-root #fb_dialog_ipad_overlay.hidden {
+            display: none
+        }
+        
+        .fb_dialog.fb_dialog_mobile.loading iframe {
+            visibility: hidden
+        }
+        
+        .fb_dialog_mobile .fb_dialog_iframe {
+            position: sticky;
+            top: 0
+        }
+        
+        .fb_dialog_content .dialog_header {
+            background: linear-gradient(from(#738aba), to(#2c4987));
+            border-bottom: 1px solid;
+            border-color: #043b87;
+            box-shadow: white 0 1px 1px -1px inset;
+            color: #fff;
+            font: bold 14px Helvetica, sans-serif;
+            text-overflow: ellipsis;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+            vertical-align: middle;
+            white-space: nowrap
+        }
+        
+        .fb_dialog_content .dialog_header table {
+            height: 43px;
+            width: 100%
+        }
+        
+        .fb_dialog_content .dialog_header td.header_left {
+            font-size: 12px;
+            padding-left: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .dialog_header td.header_right {
+            font-size: 12px;
+            padding-right: 5px;
+            vertical-align: middle;
+            width: 60px
+        }
+        
+        .fb_dialog_content .touchable_button {
+            background: linear-gradient(from(#4267B2), to(#2a4887));
+            background-clip: padding-box;
+            border: 1px solid #29487d;
+            border-radius: 3px;
+            display: inline-block;
+            line-height: 18px;
+            margin-top: 3px;
+            max-width: 85px;
+            padding: 4px 12px;
+            position: relative
+        }
+        
+        .fb_dialog_content .dialog_header .touchable_button input {
+            background: none;
+            border: none;
+            color: #fff;
+            font: bold 12px Helvetica, sans-serif;
+            margin: 2px -12px;
+            padding: 2px 6px 3px 6px;
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog_content .dialog_header .header_center {
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 18px;
+            text-align: center;
+            vertical-align: middle
+        }
+        
+        .fb_dialog_content .dialog_content {
+            background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+            border: 1px solid #4a4a4a;
+            border-bottom: 0;
+            border-top: 0;
+            height: 150px
+        }
+        
+        .fb_dialog_content .dialog_footer {
+            background: #f5f6f7;
+            border: 1px solid #4a4a4a;
+            border-top-color: #ccc;
+            height: 40px
+        }
+        
+        #fb_dialog_loader_close {
+            float: left
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+            text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+        }
+        
+        .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+            visibility: hidden
+        }
+        
+        #fb_dialog_loader_spinner {
+            animation: rotateSpinner 1.2s linear infinite;
+            background-color: transparent;
+            background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            height: 24px;
+            width: 24px
+        }
+        
+        @keyframes rotateSpinner {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+        
+        .fb_iframe_widget {
+            display: inline-block;
+            position: relative
+        }
+        
+        .fb_iframe_widget span {
+            display: inline-block;
+            position: relative;
+            text-align: justify
+        }
+        
+        .fb_iframe_widget iframe {
+            position: absolute
+        }
+        
+        .fb_iframe_widget_fluid_desktop,
+        .fb_iframe_widget_fluid_desktop span,
+        .fb_iframe_widget_fluid_desktop iframe {
+            max-width: 100%
+        }
+        
+        .fb_iframe_widget_fluid_desktop iframe {
+            min-width: 220px;
+            position: relative
+        }
+        
+        .fb_iframe_widget_lift {
+            z-index: 1
+        }
+        
+        .fb_iframe_widget_fluid {
+            display: inline
+        }
+        
+        .fb_iframe_widget_fluid span {
+            width: 100%
+        }
+    </style>
+</head>
+
+<body class="page-platform page-platform-cmn page-platform-2001" style="font-size: 12px;">
+    <input type="hidden" id="baseUrl" value="https://h5.fun2vn.com">
+    <input type="hidden" id="public_path" value="https://static.fun2vn.com/public">
+    <input type="hidden" id="webDomain" value="thonglinhsuh5.com">
+
+    <div id="gameContent" class="cmn-gameContent cmn-gameContent-2001" style="">
+        <iframe id="JCgameIframe" class="cmn-JCgameIframe" style="border: none; height: 812px; width: 375px;" src="https://vht_s1-login.kgames.online/opkul/op_kul/login?uid=180021&amp;gid=2001&amp;sid=44&amp;token=ccde1244d843c782b6a06aed2661b26c&amp;platform_id=13&amp;platform_name=cmn&amp;time=1578591910&amp;pay_url=https%3A%2F%2Fvht_s1-login.kgames.online%2Fopkul%2Fop_kul%2Fpay&amp;game_web=https%3A%2F%2Fvht_api.kgames.online&amp;share_support=1&amp;is_mobile=0&amp;language=vn&amp;sign=8bd369fe12b38b87089bc7e4b46ff5f7" width="375" height="812"></iframe>
+    </div>
+    <input type="hidden" id="gameHost" value="https://vht_s1-login.kgames.online">
+
+    <script>
+        var Platform_config = {
+            appId: "",
+            web_url: "http://game.kul.vn/vuahaitach5/redirect.html?_type=home",
+            share1: "http://game.kul.vn/vuahaitac/share-ingame/share1.html",
+            share2: "http://game.kul.vn/vuahaitac/share-ingame/share2.html",
+            share3: "http://game.kul.vn/vuahaitac/share-ingame/share3.html",
+            share4: "http://game.kul.vn/vuahaitac/share-ingame/share4.html",
+            share5: "http://game.kul.vn/vuahaitac/share-ingame/share5.html",
+            share6: "http://game.kul.vn/vuahaitac/share-ingame/share6.html",
+        };
+
+        var recharge_appItem = {
+            "10001": {
+                "name": "10001",
+                "price": "50000",
+                "unit": "VN",
+                "count": "200",
+                "other": "0"
+            },
+            "10002": {
+                "name": "10002",
+                "price": "200000",
+                "unit": "VN",
+                "count": "1880",
+                "other": "0"
+            },
+            "10003": {
+                "name": "10003",
+                "price": "500000",
+                "unit": "VN",
+                "count": "2880",
+                "other": "0"
+            },
+            "10004": {
+                "name": "10004",
+                "price": "20000",
+                "unit": "VN",
+                "count": "100",
+                "other": "10"
+            },
+            "10005": {
+                "name": "10005",
+                "price": "50000",
+                "unit": "VN",
+                "count": "250",
+                "other": "25"
+            },
+            "10006": {
+                "name": "10006",
+                "price": "100000",
+                "unit": "VN",
+                "count": "500",
+                "other": "50"
+            },
+            "10007": {
+                "name": "10007",
+                "price": "200000",
+                "unit": "VN",
+                "count": "1000",
+                "other": "100"
+            },
+            "10008": {
+                "name": "10008",
+                "price": "500000",
+                "unit": "VN",
+                "count": "2500",
+                "other": "250"
+            },
+            "10009": {
+                "name": "10009",
+                "price": "1000000",
+                "unit": "VN",
+                "count": "5000",
+                "other": "500"
+            },
+            "10010": {
+                "name": "10010",
+                "price": "2000000",
+                "unit": "VN",
+                "count": "10000",
+                "other": "1000"
+            },
+            "10011": {
+                "name": "10011",
+                "price": "5000000",
+                "unit": "VN",
+                "count": "25000",
+                "other": "2500"
+            },
+            "10012": {
+                "name": "10012",
+                "price": "1000000",
+                "unit": "VN",
+                "count": "5600",
+                "other": "0"
+            }
+        };
+    </script>
+
+    <script src="https://static.fun2vn.com/public/common/H5/js/hammer.min.js"></script>
+    <script>
+        var userConfig = {
+            "uid": "180021",
+            "user_login": "",
+            "avatar": "https://static.fun2vn.com/public/common/img/tx.png",
+            "platform_uid": "102439976"
+        };
+    </script>
+    <script src="https://static.fun2vn.com/public/common/H5/js/jquery.min.js"></script>
+    <script src="https://static.fun2vn.com/public/common/js/layer3/layer.js"></script>
+    <script src="https://static.fun2vn.com/public/common/H5/js/swiper.min.js"></script>
+    <script src="https://static.fun2vn.com/public/common/js/common.js"></script>
+    <script src="https://static.fun2vn.com/public/js/common/base.js"></script>
+    <script src="https://static.fun2vn.com/public/common/js/lang.js"></script>
+    <script src="https://thonglinhsuh5.com/sdk/common.js"></script>
+
+    <script>
+        H5App.gamePageWH();
+        H5App.gameLoadBefore();
+
+        // 获取游戏页发来的消息
+        H5App.getMessage();
+
+        H5App.setWinSize('#JCgameIframe', 0, 0);
+    </script>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId: "297107127825995",
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div id="fb-root" class=" fb_reset">
+        <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+            <div>
+                <iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://staticxx.facebook.com/connect/xd_arbiter.php?version=45#channel=f1e6090689066d4&amp;origin=https%3A%2F%2Fvht_api.kgames.online" style="border: none;"></iframe>
+            </div>
+            <div></div>
+        </div>
+    </div>
+</body>
+
+</html>

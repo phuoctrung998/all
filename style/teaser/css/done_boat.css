@@ -1,0 +1,229 @@
+.p3-custom_map .boat-done{
+    position: absolute;
+    max-width: 8%;
+  }
+  /* DONE TG */
+  .p3_tab_tg .boat-done.moc1 {
+    top: 28%;
+    left: 9%;
+    display: none;
+  }
+  .p3_tab_tg .boat-done.moc3 {
+    top: 57%;
+      left: 7%;
+      display: none;
+  }
+  .p3_tab_tg .boat-done.moc5 {
+    top: 37%;
+    left: 47%;
+    display: none;
+  }
+  .p3_tab_tg .boat-done.moc7 {
+    top: 74%;
+    left: 69%;
+    display: none;
+  }
+  .p3_tab_tg .boat-done.moc9 {
+    top: 37%;
+    left: 75%;
+    display: none;
+  }
+  /* DONE CN */
+  .p3_tab_cn .boat-done.moc1 {
+    top: 23%;
+      left: 18%;
+      display: none;
+  }
+  .p3_tab_cn .boat-done.moc3 {
+    top: 50%;
+    left: 10%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc5 {
+    top: 73%;
+    left: 16%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc7 {
+    top: 73%;
+    left: 34%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc9 {
+    top: 20%;
+    left: 40%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc11 {
+    top: 38%;
+    left: 53%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc13 {
+    top: 69%;
+      left: 61%;
+      display: none;
+  }
+  .p3_tab_cn .boat-done.moc15 {
+    top: 75%;
+    left: 77%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc17 {
+    top: 44%;
+    left: 82%;
+    display: none;
+  }
+  .p3_tab_cn .boat-done.moc19 {
+    top: 17%;
+    left: 86%;
+    display: none;
+  }
+
+
+  @media screen and (max-width: 1000px){
+    .p3-custom_map .boat-done img{
+        max-width: unset;
+        width: 8vw;
+      }
+      .p3-custom_map .boat-done{
+        position: absolute;
+        max-width: 14%;
+      }
+      /* DONE TG */
+      .p3_tab_tg .boat-done.moc1 {
+        top: 13vw;
+        left: 9vw;
+      }
+      .p3_tab_tg .boat-done.moc3 {
+        top: 27vw;
+          left: 7vw;
+      }
+      .p3_tab_tg .boat-done.moc5 {
+        top: 19vw;
+        left: 44vw;
+      }
+      .p3_tab_tg .boat-done.moc7 {
+        top: 36vw;
+        left: 65vw;
+      }
+      .p3_tab_tg .boat-done.moc9 {
+        top: 17vw;
+        left: 71vw;
+      }
+      /* DONE CN */
+    .p3_tab_cn .boat-done.moc1 {
+      top: 10vw;
+      left: 16vw;
+    }
+    .p3_tab_cn .boat-done.moc3 {
+      top: 23vw;
+        left: 9vw;
+    }
+    .p3_tab_cn .boat-done.moc5 {
+      top: 35vw;
+      left: 16vw;
+    }
+    .p3_tab_cn .boat-done.moc7 {
+      top: 35vw;
+      left: 32vw;
+    }
+    .p3_tab_cn .boat-done.moc9 {
+      top: 10vw;
+      left: 38vw; 
+    }
+    .p3_tab_cn .boat-done.moc11 {
+      top: 34vw;
+      left: 58vw;
+    }
+    .p3_tab_cn .boat-done.moc13 {
+      top: 19vw;
+        left: 50vw;
+    }
+    .p3_tab_cn .boat-done.moc15 {
+      top: 38vw;
+        left: 73vw;
+    }
+    .p3_tab_cn .boat-done.moc17 {
+      top: 22vw;
+      left: 77vw;
+    
+    }
+    .p3_tab_cn .boat-done.moc19 {
+      top: 7vw;
+      left: 80vw;
+    }
+
+
+  }
+
+  @media screen and (max-width: 640px){
+    .p3-custom_map .boat-done img {
+      width: 10vw;
+      max-width: unset;
+    }
+    /* DONE TG */
+    .p3_tab_tg .boat-done.moc1 {
+      top: 16vw;
+      left: 11vw;
+    }
+    .p3_tab_tg .boat-done.moc3 {
+      top: 35vw;
+      left: 7vw;
+    }
+    .p3_tab_tg .boat-done.moc5 {
+      top: 24vw;
+      left: 57vw;
+    }
+    .p3_tab_tg .boat-done.moc7 {
+      top: 47vw;
+      left: 83vw;
+    }
+    .p3_tab_tg .boat-done.moc9 {
+      top: 22vw;
+      left: 90vw;
+    }
+     /* DONE CN */
+  .p3_tab_cn .boat-done.moc1 {
+    top: 14vw;
+      left: 21vw;
+  }
+  .p3_tab_cn .boat-done.moc3 {
+    top: 30vw;
+    left: 11vw;
+  }
+  .p3_tab_cn .boat-done.moc5 {
+    top: 46vw;
+    left: 20vw;
+  }
+  .p3_tab_cn .boat-done.moc7 {
+    top: 46vw;
+    left: 41vw;
+  }
+  .p3_tab_cn .boat-done.moc9 {
+    top: 14vw;
+    left: 49vw;
+  }
+  .p3_tab_cn .boat-done.moc11 {
+    top: 24vw;
+    left: 66vw;
+  }
+  .p3_tab_cn .boat-done.moc13 {
+    top: 43vw;
+    left: 65vw;
+  }
+  .p3_tab_cn .boat-done.moc15 {
+    top: 48vw;
+      left: 94vw;
+  }
+  .p3_tab_cn .boat-done.moc17 {
+    top: 28vw;
+    left: 99vw;
+  }
+  .p3_tab_cn .boat-done.moc19 {
+    top: 10vw;
+    left: 104vw;
+  }
+    
+}
+

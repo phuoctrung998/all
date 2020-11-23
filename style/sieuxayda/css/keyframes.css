@@ -1,0 +1,76 @@
+@keyframes showLogo {
+  0% {opacity:0; top:-10px;}
+ 33% {opacity:0; top:-10px;}
+100% {opacity:1; top: 0.25%;}
+}
+
+@keyframes showTitle {
+  0% {opacity:0; transform:scale(3);}
+ 50% {opacity:0; transform:scale(2);}
+100% {opacity:1; transform:scale(1);}
+}
+
+@-webkit-keyframes ani_up{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, -30px);}
+  to {-webkit-transform: translate(0, 0);}
+}
+@-webkit-keyframes ani_up02{
+  from {-webkit-transform:translate(0, 0px);}
+  65% {-webkit-transform:translate(0, 22px);}
+  to {-webkit-transform: translate(0, 0);}
+}
+
+
+@-webkit-keyframes sizeanimate {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  
+  55% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+  }
+  
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes sizeanimate {
+  from {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  
+  55% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+  }
+  
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+/* Begin: Effect Login */
+@keyframes effect-login1 {
+  from{left:-1000px;}
+  to {left: 50%}
+}
+@keyframes effect-login2 {
+  from{top:-1000px;}
+  to {top: 50%}
+}
+@keyframes effect-login3 {
+  from{left:-1000px;}
+  to {left: 50%}
+}
+@keyframes effect-login4 {
+  from{top:-1000px;}
+  to {top: 50%}
+}
+/* End: Effect Login */
+

@@ -1,0 +1,350 @@
+function clickPage2(){
+    $(document).ready(function(){
+        $(".page2Pre").click(function(){
+            if(slideIndex > 1){
+                slideIndex -= 1;
+                showSlide();
+            }else{
+                slideIndex =6;
+            }
+            showSlide();
+        })
+        $(".page2Next").click(function(){
+             if(slideIndex < 6){
+                slideIndex +=1;
+            }else{
+                slideIndex =1;
+            }
+            showSlide();
+        })
+        $("#nhanvat3").click(function(){
+            $(".nhanvat").animate();
+        })
+    })
+}
+
+function cursor(){
+    $(".cursor").hover(function(){
+        $('.cursor').css('cursor','pointer');
+    })
+}
+
+function showSlide(){
+    switch(slideIndex){
+            case 1:
+                $(".slidePage").hide();
+                $("#slide1").show();
+            break;
+            case 2:
+                $(".slidePage").hide();
+                $("#slide2").show();
+            break;
+            case 3:
+                $(".slidePage").hide();
+                $("#slide3").show();
+            break;
+            case 4:
+                $(".slidePage").hide();
+                $("#slide4").show();
+            break;
+            case 5:
+                $(".slidePage").hide();
+                $("#slide5").show();
+            break;
+            case 6:
+                $(".slidePage").hide();
+                $("#slide6").show();
+            break;              
+        }        
+        $(".slidePage").css({"background-size": "cover"});
+}
+
+function slidePage2(){
+    if (slideIndex > 6) {slideIndex = 1;}    
+        showSlide();
+        slideIndex++; 
+    setTimeout(slidePage2, 3000); // Change image every 2 seconds
+}
+function btn(){
+    $("#btn-dangnhap").click(function(){
+        $(".pop-login").show();
+		$(".pop-register").hide();
+		$("#btn-dangnhap a").addClass('active');
+		$('#btn-dangky a').removeClass('active');
+    });
+    $("#btn-dangky").click(function(){
+        $(".pop-register").show();
+		$(".pop-login").hide();
+		$("#btn-dangky a").addClass('active');
+		$('#btn-dangnhap a').removeClass('active');
+    });
+     $("#btn-dangnhapMb").click(function(){
+        $(".input-nhaplaimkMb").hide(300);
+    });
+    $("#btn-dangkyMb").click(function(){
+        $(".input-nhaplaimkMb").show(700);
+    });
+    $(".popupDangnhap-btnDangnhap").hover(function(){
+        $('.popup-btndangnhap').hide();
+        $('.popup-btndangnhapH').show();
+    });
+    $(".popupDangnhap-btnDangnhap").mouseleave(function(){
+        $('.popup-btndangnhap').show();
+        $('.popup-btndangnhapH').hide();
+    })
+    $('.audioPlay').click(function(){
+        $('.audioMute').show();
+        $(this).hide();
+        audio.pause();
+    })
+    $('.audioMute').click(function(){
+        $('.audioPlay').show();
+        $(this).hide();
+        audio.play();
+    })
+}
+function dangNhap(){
+    $('.popupDangnhapPc').SlickModals({
+		popup_type: 'none',
+		popup_animation: "zoomIn",
+		popup_position: 'center',
+		popup_closeButtonPlace: 'inside',
+		popup_closeButtonStyle: 'cancel circle',
+		popup_closeButtonEnable  : true,
+		popup_closeButtonAlign	: 'right',
+		popup_css: { 
+			'width': '800px',
+			'background':  'transparent',
+			'padding': '0',
+			'margin': '30px',
+			'text-align': 'center',
+			'z-index' : '99999999'
+		},
+		overlay_isVisible: true,
+		mobile_breakpoint: '480px',
+		mobile_position: 'center',
+		mobile_css: {
+			'width': '800px',
+			'background': 'transparent',
+			'padding': '0',
+			'margin': 'auto',
+			'text-align': 'center'
+		}     
+	});
+}
+
+function popupDangnhapMb(){ // popup dang nhap mb
+    $('.popupDangnhapMb').SlickModals({
+                popup_type: 'none',
+                popup_animation: "slideTop",
+                popup_position: 'center',
+                popup_closeButtonPlace: 'inside',
+                popup_closeButtonStyle: 'cancel circle',
+                popup_closeButtonEnable 	: true,
+                 'popup_closeButtonAlign'	: 'left',
+                popup_css: { 
+                    'width': '345px',
+                    'background':  'transparent',
+                    'padding': '0',
+                    'margin': '30px',
+                    'text-align': 'center',
+                    'z-index' : '99999999'
+                },
+                overlay_isVisible: true,
+                mobile_breakpoint: '480px',
+                mobile_position: 'center',
+                mobile_css: {
+                    'width': '345px',
+                    'background': 'transparent',
+                    'padding': '0',
+                    'margin': 'auto',
+                    'text-align': 'center'
+                }
+            });
+}
+
+function giftcode(){
+    $('.popupGiftcode').SlickModals({
+		popup_type: 'none',
+		popup_animation: "zoomIn",
+		popup_position: 'center',
+		popup_closeButtonPlace: 'inside',
+		popup_closeButtonStyle: 'cancel circle',
+		popup_closeButtonEnable       : true,
+		popup_css: { 
+			'width': '938px',
+			'height': '454px',
+			'background':  'transparent',
+			'padding': '0',
+			'margin': '30px',
+			'text-align': 'center',
+			'z-index' : '99999999'
+		},
+		overlay_isVisible: true,
+		mobile_breakpoint: '480px',
+		mobile_position: 'center',
+		mobile_css: {
+			'width': '938px',
+			'background': 'transparent',
+			'padding': '0',
+			'margin': 'auto',
+			'text-align': 'center'
+		}      
+	});
+}
+
+function giftcodetb(){
+    $('.popupGiftcodeTb').SlickModals({
+                popup_type: 'none',
+                popup_animation: "zoomIn",
+                popup_position: 'center',
+                popup_closeButtonPlace: 'inside',
+                popup_closeButtonStyle: 'cancel circle',
+                popup_closeButtonEnable       : true,
+                popup_css: { 
+                    'width': '700px',
+                    'height': '454px',
+                    'background':  'transparent',
+                    'padding': '0',
+                    'margin': '30px',
+                    'text-align': 'center',
+                    'z-index' : '99999999'
+                },
+                overlay_isVisible: true,
+                mobile_breakpoint: '480px',
+                mobile_position: 'center',
+                mobile_css: {
+                    'width': '700px',
+                    'background': 'transparent',
+                    'padding': '0',
+                    'margin': 'auto',
+                    'text-align': 'center'
+                }         
+            });
+}
+function giftcodemb(){
+    $('.popupGiftcodeMb').SlickModals({
+                popup_type: 'none',
+                popup_animation: "zoomIn",
+                popup_position: 'center',
+                popup_closeButtonPlace: 'inside',
+                popup_closeButtonStyle: 'cancel circle',
+                popup_closeButtonEnable       : true,
+                popup_css: { 
+                    'width': '350px',
+                    'height': '220px',
+                    'background':  'transparent',
+                    'padding': '0',
+                    'margin': '0px',
+                    'text-align': 'center',
+                    'z-index' : '99999999'
+                },
+                overlay_isVisible: true,
+                mobile_breakpoint: '480px',
+                mobile_position: 'center',
+                mobile_css: {
+                    'width': '350px',
+                    'height': '220px',
+                    'background': 'transparent',
+                    'padding': '0',
+                    'margin': 'auto',
+                    'text-align': 'center'
+                }        
+            });
+}
+function popupvideo(){
+    $('#ytVideo').SlickModals({
+                popup_animation: 'fadeIn',
+                popup_position: 'center',
+                popup_closeButtonStyle: 'text label',
+                popup_css: {
+                    'width': '80%',
+                    'height': '80%',
+                    'padding': '0',
+                    'margin' : 'auto'
+                },
+                mobile_breakpoint: '640px',
+                mobile_position: 'center',
+                mobile_css: {
+                    'width': '90%',
+                    'height': '90%',
+                    'padding': '0',
+                    'margin' : 'auto'
+                },
+                popup_reopenClass:"btn-popupVideo",
+                callback_afterVisible: function () {
+                    ytVideo.playVideo();
+                },
+                callback_afterClose: function () {
+                    ytVideo.pauseVideo();
+                }
+            });
+}
+function btnHover(){
+    //left 
+    $(".btnChoingayDefaul").hover(function(){
+        $(this).attr('src','/style/teaser2/images/right/choingay.png');
+    })
+    $(".btnChoingayDefaul").mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/right/choingay-h.png');
+    })
+    $(".congdongDefaul").hover(function(){
+        $(this).attr('src','/style/teaser2/images/right/congdong-h.png');
+    })
+    $(".congdongDefaul").mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/right/congdong.png');
+    })
+     $(".fanpageDefaul").hover(function(){
+        $(this).attr('src','/style/teaser2/images/right/fanpage-h.png');
+    })
+    $(".fanpageDefaul").mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/right/fanpage.png');
+    })
+     $(".trangchuDefaul").hover(function(){
+        $(this).attr('src','/style/teaser2/images/right/trangchu-h.png');
+    })
+    $(".trangchuDefaul").mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/right/trangchu.png');
+    })
+    // right
+    $("#gioithieu").hover(function(){
+        $('#gioithieu').attr('src','/style/teaser2/images/left/gioithieu-h.png');
+    })
+    $("#gioithieu").mouseleave(function(){
+        $('#gioithieu').attr('src','/style/teaser2/images/left/gioithieu.png');
+    })
+    $("#tinhnang").hover(function(){
+        $('#tinhnang').attr('src','/style/teaser2/images/left/tinhnang-h.png');
+    })
+    $("#tinhnang").mouseleave(function(){
+        $('#tinhnang').attr('src','/style/teaser2/images/left/tinhnang.png');
+    })
+    $("#timeline").hover(function(){
+        $('#timeline').attr('src','/style/teaser2/images/left/timeline-h.png');
+    })
+    $("#timeline").mouseleave(function(){
+        $('#timeline').attr('src','/style/teaser2/images/left/timeline.png');
+    })
+
+    // btn page 3 hover
+    $('.nhancode').hover(function(){
+        $(this).attr('src','/style/teaser2/images/page3/nhancodehv.png');
+    })
+    $('.nhancode').mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/page3/nhancode.png');
+    })
+    $('.sharecode').hover(function(){
+        $(this).attr('src','/style/teaser2/images/page3/sharehv.png');
+    })
+    $('.sharecode').mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/page3/share.png');
+    })
+    $('.nhantuong').hover(function(){
+        $(this).attr('src','/style/teaser2/images/page3/nhantuonghv.png');
+    })
+    $('.nhantuong').mouseleave(function(){
+        $(this).attr('src','/style/teaser2/images/page3/nhantuong.png');
+    })
+
+
+}

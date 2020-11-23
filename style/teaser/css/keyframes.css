@@ -1,0 +1,219 @@
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+@-webkit-keyframes fadeOut {
+  from {opacity: 1;} 
+  to {opacity: 0;}
+  }
+  
+  @keyframes fadeOut {
+  from {opacity: 1;}
+  to {opacity: 0 ;}
+  }
+@keyframes showTitle {
+  0% {opacity:0; transform:scale(3);}
+ 50% {opacity:0; transform:scale(2);}
+100% {opacity:1; transform:scale(1);}
+}
+/* figure  */
+
+@-webkit-keyframes figure01{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, -10px);}
+  to {-webkit-transform: translate(0, 0);}
+}
+
+@-moz-keyframes figure01{
+  from {-moz-transform:translate(0, 0);}
+  65% {-moz-transform:translate(0, -10px);}
+  to {-moz-transform: translate(0, 0);}
+}
+@-webkit-keyframes figure02{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, 15px);}
+  to {-webkit-transform: translate(0, 0);}
+}
+
+@-moz-keyframes figure02{
+  from {-moz-transform:translate(0, 0);}
+  65% {-moz-transform:translate(0, 15px);}
+  to {-moz-transform: translate(0, 0);}
+}
+@-webkit-keyframes figure03{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, 30px);}
+  to {-webkit-transform: translate(0, 0);}
+}
+
+@-moz-keyframes figure03{
+  from {-moz-transform:translate(0, 0);}
+  65% {-moz-transform:translate(0, 30px);}
+  to {-moz-transform: translate(0, 0);}
+}
+
+@keyframes showVideo {
+  0% {transform: scale(0);}
+ 10% {transform: scale(0.1);}
+ 20% {transform: scale(0.2);}
+ 30% {transform: scale(0.3);}
+ 40% {transform: scale(0.4);}
+ 50% {transform: scale(0.5);}
+ 60% {transform: scale(0.6);}
+ 70% {transform: scale(0.7);}
+ 80% {transform: scale(0.8);}
+ 90% {transform: scale(0.9);}
+100% {transform: scale(1);}
+}
+@keyframes showLogo {
+  0% {opacity:0; left:-10px;}
+ 33% {opacity:0; left:-10px;}
+100% {opacity:1; left: 0;}
+}
+
+@keyframes showMenuRight {
+  0% {opacity:0; right:-10px;}
+ 33% {opacity:0; right:-10px;}
+100% {opacity:1; right: 1%;}
+}
+@keyframes showMenuRight2 {
+  0% {opacity:0; right:8%;}
+ 33% {opacity:0; right:10%;}
+100% {opacity:1; right: 13%;}
+}
+@keyframes showMenuLeft {
+  0% {opacity:0; left:-10px;}
+ 33% {opacity:0; left:-10px;}
+100% {opacity:1; left: 1%;}
+}
+@keyframes pulse {
+  0% { -moz-transform: scale(.8); }
+  50% { -moz-transform: scale(1); }
+  100% { -moz-transform: scale(.8); }
+}
+@-moz-keyframes pulse {
+  0% { -moz-transform: scale(.8); }
+  50% { -moz-transform: scale(1); }
+  100% { -moz-transform: scale(.8); }
+}
+
+
+@keyframes show_object {
+  0% {opacity:0; transform:scale(  3);}
+ 50% {opacity:0; transform:scale(  2);}
+ 90% {opacity:1; transform:scale(0.9);}
+100% {opacity:1; transform:scale(  1);}
+}
+
+@keyframes show_logo {
+  0% {opacity:0; top: -1%;}
+ 33% {opacity:0; top: 0%;}
+100% {opacity:1; top: 1%;}
+}
+
+/* Effect for Page */
+
+
+
+
+@-webkit-keyframes Mousex{
+  from {-webkit-transform:translate(0, 0px);}
+  65% {-webkit-transform:translate(0, 15px);}
+  to {-webkit-transform: translate(0, -0px);    }
+}
+
+/* Begin: Effect Login */
+@keyframes effect-login1 {
+  from{left:-1000px;}
+  to {left: 50%}
+}
+@keyframes effect-login2 {
+  from{top:-1000px;}
+  to {top: 50%}
+}
+@keyframes effect-login3 {
+  from{left:-1000px;}
+  to {left: 50%}
+}
+@keyframes effect-login4 {
+  from{top:-1000px;}
+  to {top: 50%}
+}
+/* End: Effect Login */
+
+
+/* Animate Menu Right */
+@-webkit-keyframes pendulum {
+  0%{
+      -webkit-transform: rotate(-5deg);
+  }
+  50%{
+      -webkit-transform: rotate(5deg);
+  }
+  100%{
+      -webkit-transform: rotate(-5deg);
+  }
+} 
+@-moz-keyframes pendulum { 
+ 0%{
+      -moz-transform: rotate(-5deg);
+  }
+  50%{
+      -moz-transform: rotate(5deg);
+  }
+  100%{
+      -moz-transform: rotate(-5deg);
+  }
+} 
+@keyframes pendulum { 
+  0%{
+      transform: rotate(-5deg);
+  }
+  50%{
+      transform: rotate(5deg);
+  }
+  100%{
+      transform: rotate(-5deg);
+  }
+}
+
+
+@-webkit-keyframes pendulum1 {
+  0%{
+      -webkit-transform: rotate(-5deg);
+  }
+  50%{
+      -webkit-transform: rotate(5deg);
+  }
+  100%{
+      -webkit-transform: rotate(-5deg);
+  }
+} 
+@-moz-keyframes pendulum1 { 
+ 0%{
+      -moz-transform: rotate(-5deg);
+  }
+  50%{
+      -moz-transform: rotate(5deg);
+  }
+  100%{
+      -moz-transform: rotate(-5deg);
+  }
+} 
+@keyframes pendulum1 { 
+  0%{
+      transform: rotate(-5deg);
+  }
+  50%{
+      transform: rotate(5deg);
+  }
+  100%{
+      transform: rotate(-5deg);
+  }
+}

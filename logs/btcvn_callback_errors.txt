@@ -1,0 +1,3 @@
+time = 2019-09-17 20:44:39msg  = Đã nhận được thẻ, nhưng tài khoản chưa tạo nhân vậtDATA = []
+time = 2019-09-17 20:45:41msg  = Đã nhận được thẻ, nhưng tài khoản chưa tạo nhân vật{"rolename":"C\u1ea3nTu","maxFightVal":4644944,"viplv":13,"ret":0,"level":51}DATA = []
+time = 2019-09-17 20:46:08msg  = Đã nhận được thẻ, nhưng tài khoản chưa tạo nhân vật{"rolename":"C\u1ea3nTu","maxFightVal":4644944,"viplv":13,"ret":0,"level":51}DATA = []

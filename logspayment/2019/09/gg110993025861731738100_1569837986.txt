@@ -1,0 +1,1 @@
+{"action":"NAP B1:","created_time":"2019-09-30 17:06:26","username":"gg110993025861731738100","transaction_id":3620,"percent_promotion":0,"coin":0,"coin_real":0,"loainap":"Nap vang"}

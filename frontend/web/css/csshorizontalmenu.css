@@ -1,0 +1,84 @@
+.horizontalcssmenu ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*Top level list items*/
+.horizontalcssmenu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+	
+}
+
+/*Top level menu link items style*/
+.horizontalcssmenu ul li a{
+	display: inline-table;
+	width: auto; /*Width of top level menu link items*/
+	padding: 11px 8px;
+	border-right: 0px solid #cccccc;
+	border-left-width: 0;
+	text-decoration: none;
+	color: #000;
+	font: 12px Tahoma;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding-top: 15px;
+}
+	
+/*Sub level menu*/
+.horizontalcssmenu ul li ul{
+	left: 0;
+	top: 0;
+	position: absolute;
+	display: block;
+	visibility: hidden;
+	z-index: 100;
+	padding-top: 3px;
+}
+
+/*Sub level menu list items*/
+.horizontalcssmenu ul li ul li{
+display: inline;
+float: none;
+}
+
+
+/* Sub level menu links style */
+.horizontalcssmenu ul li ul li a{
+	width: 160px; /*width of sub menu levels*/
+	font-weight: normal;
+	padding: 4px 7px 5px 10px;
+	color: #000;
+	border-bottom: 1px dotted #cccccc;
+	background-color: #FFF;
+	text-align: left;
+	line-height: 20px;
+	text-transform: none;
+	box-shadow: 0px 0px 10px 5px #cccccc;
+}
+
+.horizontalcssmenu ul li a:hover{
+	color: #900;
+}
+
+.horizontalcssmenu ul li ul li a:hover{
+	color: #900;
+}
+
+.horizontalcssmenu .arrowdiv{
+position: absolute;
+right: 0;
+background: transparent ;
+}
+
+* html p#iepara{ /*For a paragraph (if any) that immediately follows menu, add 1em top spacing between the two in IE*/
+	padding-top: 1em;
+	color: #FFFFFF;
+}
+	
+/* Holly Hack for IE \*/
+* html .horizontalcssmenu ul li { float: left; height: 1%; }
+* html .horizontalcssmenu ul li a { height: 1%; }
+/* End */

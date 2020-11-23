@@ -1,0 +1,98 @@
+/* begin: Xoay vong tron */
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+/* end: Xoay vong tron */
+
+/* begin: vong quay may man */
+@-webkit-keyframes rotating
+/*Safari and Chrome */
+{
+to {
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+from {
+  -ms-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+}
+@keyframes rotating {
+to {
+  -ms-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+from {
+  -ms-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+}
+/* end: vong quay may man */
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+/* end: tooltip CLICK */  
+
+@-webkit-keyframes figure01{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, -10px);}
+  to {-webkit-transform: translate(0, 0);    }
+}
+
+@-moz-keyframes figure01{
+  from {-moz-transform:translate(0, 0);}
+  65% {-moz-transform:translate(0, -10px);}
+  to {-moz-transform: translate(0, 0);}
+}
+@-webkit-keyframes figure02{
+  from {-webkit-transform:translate(0, 0);}
+  65% {-webkit-transform:translate(0, 20px);}
+  to {-webkit-transform: translate(0, 0);    }
+}
+
+@-moz-keyframes figure02{
+  from {-moz-transform:translate(0, 0);}
+  65% {-moz-transform:translate(0, 20px);}
+  to {-moz-transform: translate(0, 0);}
+}
+
+/* star */
+@-webkit-keyframes star{
+  0% {opacity: .3;}
+  50% {opacity: .6;}
+  100% {opacity: 1;}
+}
+@keyframes star{
+  0% {opacity: .3;}
+  50% {opacity: .6;}
+  100% {opacity: 1;}
+}

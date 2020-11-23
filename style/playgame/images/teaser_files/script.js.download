@@ -1,0 +1,224 @@
+jQuery(document).ready(function($) {
+    $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 600,
+        loop: true
+    });
+    
+    /* Countdown */
+    $(".timecount").countdown({
+        date: "11 july 2019 10:00:00",
+        format: "on"
+    },
+    function () {
+        // callback function
+    });
+    /* End Countdown */
+    
+    /* hover img */
+    $(".selected").hover(function () {
+        var hoverImg = HoverImgOf($(this).attr("src"));
+        $(this).attr("src", hoverImg);
+    }, function () {
+        var normalImg = NormalImgOf($(this).attr("src"));
+        $(this).attr("src", normalImg);
+    });
+    /* end hover img */
+    
+    /* Tab Nhan vat */
+    $('.pager_nv li').click(function() {
+        $liIndex = $(this).index() + 1;
+        $('.pager_nv li').removeClass('active');
+        $(this).addClass('active');
+        $('.nv-tab .tab').removeClass('active');
+        $('.nv-tab .tab:nth-child('+$liIndex+')').addClass('active');
+    });
+    /* End Tab Nhan Vat */
+    
+    $("#popup_register nav a").click(function() {
+        if (!$(this).hasClass("select")) {
+            $("#popup_register nav a").removeClass("select");
+            $("#popup_register nav a").removeClass("pselect");
+            $(this).addClass("select");
+        }
+    });
+    
+    $('.close-video a').click(function(){
+        $('#hidpopup').fadeOut();
+        $('.video-game').addClass('active');
+    });
+    
+    $('.click-video').click(function() {
+        $('#hidpopup').fadeIn();
+        $('.video-game').removeClass('active');
+    });
+    
+    $('.close-video2 a').click(function(){
+        $('.video-game').fadeOut();
+        $('.video-game iframe').attr("src","");
+    });
+    
+    setInterval(function(){ 
+        if($('.start').hasClass('active')) {
+            $('.start').removeClass('active');
+        }else {
+            $('.start').addClass('active');    
+        }
+    }, 500);
+    
+    $('.start').click(function(){
+        popupShow('#popup_register');
+    });
+    $('.register-close a').click(function(){
+        popupHide('#popup_register');
+    });
+    
+    /* Slider Menu */
+    startslide();
+    $('.slider,.hasMarkt a img').mouseover(function(){
+        stopslide();
+        if($('.slider img').hasClass('active')){
+            var active = $('.slider img').attr('id');
+            $('.'+active).show();
+        }
+    });
+
+    $('.slider,.hasMarkt a img').mouseout(function(){
+        startslide();
+        var active = $('.slider img').attr('id');
+            $('.'+active).hide();
+    });
+    
+    /* End Slider Menu */
+    
+    /* Music The Wheel */
+    // $('.vq-quay a').click(function() {
+    //     audio.load();
+    //     audio.play(); 
+    //     $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
+    //     setTimeout(function(){
+    //         audio.pause(); 
+    //         $(".main").onepage_scroll(function() {
+    //             $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+    //                 var delta = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+    //                 if (!$("body").hasClass("disabled-onepage-scroll")) init_scroll(event, delta);
+    //             });
+    //         });
+    //         $(".main").moveTo(4);
+    //     }, 10000);
+    // });
+
+    
+    /* End Music The Wheel */
+    
+    /* The Wheel */
+    window.WHEELOFFORTUNE = {
+        cache: {},
+        init: function () {
+
+            var _this = this;
+            this.cache.wheel = $('.wheel');
+            this.cache.wheelMarker = $('.marker');
+            this.cache.wheelSpinBtn = $('.vq-quay');
+            this.cache.wheelMapping = [
+                'Vip 10',
+                100,
+                500,
+                'Không Trúng Giải',
+                300,
+                50,
+                10,
+                'Không Trúng Giải',
+                100,
+                20,
+                'Vip 9',
+                'Không Trúng Giải',
+                'Vip 10'
+            ].reverse();
+
+            this.cache.wheelSpinBtn.on('click', function (e) {
+                e.preventDefault();
+                if (!$(this).hasClass('disabled')) _this.spin();
+            });
+            this.resetSpin();
+        },
+        spin: function () {
+            var _this = this;
+            this.resetSpin();
+            this.cache.wheelSpinBtn.addClass('disabled');
+            var deg = 1000 + Math.round(Math.random() * 1000),
+                duration = 10000;
+            _this.cache.wheelPos = deg;
+            this.cache.wheel.transition({
+                rotate: '0deg'
+            }, 0)
+                .transition({
+                rotate: deg + 'deg'
+            }, duration, 'easeOutCubic');
+            _this.cache.wheelMarker.transition({
+                rotate: '-20deg'
+            }, 0, 'snap');
+            setTimeout(function () {
+                _this.cache.wheelMarker.transition({
+                    rotate: '0deg'
+                }, 300, 'easeOutQuad');
+            }, duration - 500);
+            setTimeout(function () {
+                var spin = _this.cache.wheelPos,
+                    degrees = spin % 360,
+                    percent = (degrees / 360) * 100,
+                    segment = Math.round(degrees / 30);
+                    win = _this.cache.wheelMapping[segment];
+                setTimeout(function () {
+                    alert('Phần thưởng: '+win+'!');
+                }, 700);
+                _this.cache.wheelSpinBtn.removeClass('disabled');
+            }, duration);
+        },
+        resetSpin: function () {
+            this.cache.wheel.transition({
+                rotate: '0deg'
+            }, 0);
+            this.cache.wheelPos = 0;
+        }
+    }
+    window.WHEELOFFORTUNE.init();
+    /* End The Wheel */
+    
+    
+});
+
+function popupShow(showpop) {
+    $('#hidpopup').fadeIn();
+    $(showpop).fadeIn();
+}
+function popupHide(hidepop) {
+    $('#hidpopup').fadeOut();
+    $(hidepop).fadeOut();
+}
+function HoverImgOf(filename) {
+    var re = new RegExp("(.+)\\.(gif|png|jpg)", "g");
+    return filename.replace(re, "$1_hover.$2");
+}
+function NormalImgOf(filename) {
+    var re = new RegExp("(.+)_hover\\.(gif|png|jpg)", "g");
+    return filename.replace(re, "$1.$2");
+}
+function changetab(id) {
+    document.getElementById("flogin").style.display = "none";
+    document.getElementById("freg").style.display = "none";
+    if (id != '') {
+        document.getElementById(id).style.display = "block";
+    }
+}
+
+var interval;
+function slide() {
+    $('.slider img:first-child').removeClass('active').fadeOut().next().addClass('active').fadeIn().end().appendTo('.slider');
+}
+function startslide(){
+    interval = setInterval(function(){slide()},1000);
+}
+function stopslide(){
+    clearInterval(interval);
+}
