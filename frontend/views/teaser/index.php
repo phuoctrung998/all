@@ -29,7 +29,7 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 
 <head>
 	<meta charset="utf-8">
-	<title>Siêu Xay Da</title>
+	<title>Siêu Xay Da </title>
 	<meta name="title" content="Siêu Xay Da" />
 	<meta name="description" content="Siêu Xay Da" />
 
@@ -706,107 +706,173 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 				<div class="tab ">
 					<div class="title-popup"><img src="<?=$styleTeaser?>/images/pop3-title-doicode.png"></div>
 					<div class="content-doiqua">
+					<?php if(!Yii::$app->user->isGuest){?>	
 						<ul>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode01.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
-									</div>
-								</div>
+							<div>
+								<?php
+								$stt1=0; 								
+								foreach($ngoc1 as $t => $tt){ $stt1++ ?>
+								<?php }?>
+
+								<?php
+								$stt2=0; 
+								foreach($ngoc2 as $t => $tt){ $stt2++ ?>
+								<?php }?>
+
+								<?php
+								$stt3=0; 
+								foreach($ngoc3 as $t => $tt){ $stt3++ ?>
+								<?php }?>
+
+								<?php
+								$stt4=0; 
+								foreach($ngoc4 as $t => $tt){ $stt4++ ?>
+								<?php }?>
+
+								<?php
+								$stt5=0; 
+								foreach($ngoc5 as $t => $tt){ $stt5++ ?>
+								<?php }?>
+
+								<?php
+								$stt6=0; 
+								foreach($ngoc6 as $t => $tt){ $stt6++ ?>
+								<?php }?>
+
+								<?php								
+								$stt7=0;
+								foreach($ngoc7 as $t => $tt){ $stt7++ ?>
+								<?php }?>
+
+								<?php 
+								$tong= $stt1 + $stt2 + $stt3 + $stt4 + $stt5 + $stt6 + $stt7; 
+								?>
+							</div>			
 								
-								
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode02.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+
+							<!-- code minigame 1 -->
+							<li class="minigame-doicode" data-id='1'>
+								<?php if ($tong <= 10 && $tong != 0 ) { ?>
+									
+									<div class="dc-img">	
+										<img src="<?=$styleTeaser?>/images/p4-doicode01.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode03.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									<div class="img_hv btn-change-code">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode04.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									<?php } else{ ?>
+									<div class="dc-img btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-doicode01.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode01.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									<div class="img_hv btn-change-code btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
+								<?php } ?>
 							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode02.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									
+													
+							<li class="minigame-doicode" data-id='2'>
+								<?php if($tong <= 15 && $tong >= 10 ) { ?>
+									
+									<div class="dc-img">
+										<img src="<?=$styleTeaser?>/images/p4-doicode02.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode03.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									<div class="img_hv btn-change-code">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
-							</li>
-							<li>
-								<div class="dc-img">
-									<img src="<?=$styleTeaser?>/images/p4-doicode04.png" alt="">
-									<div class="dc-tooltip"> 
-										<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+									<?php } else{ ?>
+									<div class="dc-img btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-doicode02.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
 									</div>
-								</div>
-								<div class="img_hv btn-change-code">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
-									<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
-								</div>
+									<div class="img_hv btn-change-code btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
+									</div>
+								<?php } ?>
 							</li>
+
+							
+							<li class="minigame-doicode" data-id='3'>
+								<?php if($tong <= 20 && $tong >= 15 ) { ?>
+									
+									<div class="dc-img">
+										<img src="<?=$styleTeaser?>/images/p4-doicode03.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
+									</div>
+									<div class="img_hv btn-change-code">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
+									</div>
+									<?php } else{ ?>
+									<div class="dc-img btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-doicode03.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
+									</div>
+									<div class="img_hv btn-change-code btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
+									</div>
+								<?php } ?>
+							</li>
+							
+																		
+							<li class="minigame-doicode" data-id='4'>
+								<?php if($tong <= 25 && $tong >= 20) { ?>
+									
+									<div class="dc-img">
+										<img src="<?=$styleTeaser?>/images/p4-doicode04.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
+									</div>
+									<div class="img_hv btn-change-code">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
+									</div>
+									<?php } else{ ?>
+									<div class="dc-img btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-doicode04.png" alt="">
+										<div class="dc-tooltip"> 
+											<img src="<?=$styleTeaser?>/images/p4-tooltip.png" alt="">
+										</div>
+									</div>
+									<div class="img_hv btn-change-code btn-chua-datmoc">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode.png" alt="">
+										<img src="<?=$styleTeaser?>/images/p4-btn-doicode-hv.png" alt="">
+									
+									</div>
+								<?php } ?>
+							</li>
+							
+							
 						</ul>
-						
+						<?php } ?>
 					</div>
 					
 				</div>
@@ -821,9 +887,9 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 									<th width="50%">Tên Code</th>
 									<th width="20%">Mã Code</th>
 								<tr>
-									<td>1</td>
-									<td>Dragon</td>
-									<td>ABCZZ</td>
+									<td></td>
+									<td></td>
+									<td></td>
 								</tr>
 							
 			
@@ -847,60 +913,40 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 						<ul>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc1.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc1 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt1?></div>
+								
 								
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc2.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc2 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt2?></div>
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc3.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc3 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt3?></div>
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc4.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc4 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt4?></div>
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc5.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc5 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt5?></div>
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc6.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc6 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt6?></div>
 							</li>
 							<li>
 								<img src="<?=$styleTeaser?>/images/ngoc7.png" alt="">
-								<?php
-								$stt=0; 
-								foreach($ngoc7 as $t => $tt){ $stt++ ?>
-								<?php }?>
-								<div class="tn-number"><?=$stt?></div>
+								
+								<div class="tn-number"><?=$stt7?></div>
 							</li>
 						</ul>
 					</div>
@@ -991,14 +1037,25 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 		</div>
 	</div>
 	<!-- End: Popups for page 04 -->
-
+	<div class="popup-defaul pop-giftcode">
+		<div class="close-popup"></div>
+		<div class="content-popup">
+			<p>Code của bạn là</p>
+			<p class="label-code">
+				
+				<center><span style="color:white;font-size:25px" type="text" id="giftcode-text"></span></center>
+			
+				
+			</p>
+		</div>
+	</div>
 	<!-- Begin: Popups for page 05 -->
 	<div class="popup-defaul popup-datmoc">
 		<div class="close-popup"></div>
 		<div class="content-popup">
 			<p>Code của bạn là</p>
 			<p class="label-code">
-				<input type="text" value="XXXX-XXXX-XXXX-XXXX" readonly class='input-res'>
+				<input type="text" value=""  readonly class='input-res'> 
 				<button><span class="img_hv">
 					<img src="<?=$styleTeaser?>/images/btn-coppy.png" alt="">
 					<img src="<?=$styleTeaser?>/images/btn-coppy-hv.png" alt=""></span>
@@ -1010,7 +1067,7 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 	<div class="popup-defaul popup-chua-datmoc">
 		<div class="close-popup"></div>
 		<div class="content-popup">
-			<p>Chưa đủ mốc Anh Hùng đăng ký</p>
+			<p>Chưa đủ điều kiện nhận Giftcode</p>
 		</div>
 	</div>
 	<!-- End: Popups for page 05 -->
@@ -1059,7 +1116,7 @@ $styleCommonUrl = Yii::getAlias('@webDomain').'/style/common';
 
 	<script type="text/javascript" src="<?=$styleTeaser?>/js/custom.js"></script>
 	
-	<script type="text/javascript" src="<?=$styleTeaser?>/js/game.js"></script>
+
 
 	<script type="text/javascript" src="<?=$styleTeaser?>/js/jquery.countdown.min.js"></script>
 	<script type="text/javascript">

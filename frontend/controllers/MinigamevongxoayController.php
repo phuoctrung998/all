@@ -42,7 +42,7 @@ class MinigamevongxoayController extends Controller
         return $response;
     }
 	
-	/** Lắc xí ngầu **/
+	/** Triệu hồi **/
 	public function actionXoay()
 	{
 		try{
@@ -146,7 +146,144 @@ class MinigamevongxoayController extends Controller
 	}
 	
 	
-	
+		
+	public function actionDoicode()
+	{
+		$codeid	= crequest()->post('codeid');
+		if(Yii::$app->user->isGuest){
+			return $this->jsonOut(true, 'fail','Vui lòng đăng nhập!');
+		}
+		$member_id 			=  Yii::$app->user->identity->member_id;
+		$minigameModel 		= new MinigameVongXoayModel();
+		$result_member_ngocrong = $minigameModel->getDiemByMemberId($member_id);
+		$result_member_ngocrong = (int)$result_member_ngocrong;
+		$code = "";	
+		if(!empty($codeid)){
+			switch($codeid){
+				case 1:
+					$model 	= new GiftcodeModel();
+					$code_hoangkim1 		= 5001;
+					$code_hoangkim1_nhan = $model->checkMemberIssetGiftcode($member_id,$code_hoangkim1);
+					if(!empty($code_hoangkim1_nhan)){
+						$code = $code_hoangkim1_nhan->giftcode;
+					}
+					elseif($result_member_ngocrong > 7)
+					{
+						/** Code Pháp Sư Sơ Cấp **/
+						
+						if(empty($code_hoangkim1_nhan)){
+							$code_hoangkim1_nhan = $model->getActiveGiftcode($code_hoangkim1);
+							if(!empty($code_hoangkim1_nhan)){
+								$model->updateGiftcode($code_hoangkim1_nhan->id,$member_id);
+								
+							}
+						}
+						if(!empty($code_hoangkim1_nhan)){
+							$code = $code_hoangkim1_nhan->giftcode;					
+						}else{
+							$code = "Giftcode đã phát hết!";
+						}
+					}else{
+						$code = " Chưa đủ điểm nhận code";
+					}
+					break;
+				case 2:
+					$code_hoangkim2 	= 5002;
+					$model 	= new GiftcodeModel();
+					$code_hoangkim2_nhan 	= $model->checkMemberIssetGiftcode($member_id,$code_hoangkim2);
+					if(!empty($code_hoangkim2_nhan)){
+						$code = $code_hoangkim2_nhan->giftcode;
+					}elseif($result_member_ngocrong >= 35 ){
+						/** Code Pháp Sư Trung Cấp **/
+						if(empty($code_hoangkim2_nhan)){
+							$code_hoangkim2_nhan = $model->getActiveGiftcode($code_hoangkim2);
+							if(!empty($code_hoangkim2_nhan)){
+								$model->updateGiftcode($code_hoangkim2_nhan->id,$member_id);
+								$flag_buy_hero = $minigameModel->addBuyHero($member_id,1,35);
+							}
+						}
+						if(!empty($code_hoangkim2_nhan)){
+							$code = $code_hoangkim2_nhan->giftcode;
+							
+						}else{
+							$code = "Giftcode đã phát hết!";
+						}
+						
+					}else{
+						$code = "Chưa đủ điểm nhận code";
+					}
+					break;
+				case 3:
+					$code_thienkim 	= 5003;
+					$model 	= new GiftcodeModel();
+					$code_thienkim_nhan 	= $model->checkMemberIssetGiftcode($member_id,$code_thienkim);
+					if(!empty($code_thienkim_nhan)){
+						$code = $code_thienkim_nhan->giftcode;
+					}elseif($result_member_ngocrong>=95){
+						/** Code Pháp Sư Cao Cấp **/
+						
+						if(empty($code_thienkim_nhan)){
+							$code_thienkim_nhan = $model->getActiveGiftcode($code_thienkim);
+							if(!empty($code_thienkim_nhan)){
+								$model->updateGiftcode($code_thienkim_nhan->id,$member_id);
+								$flag_buy_hero = $minigameModel->addBuyHero($member_id,1,95);
+							}
+						}
+						if(!empty($code_thienkim_nhan)){
+							$code = $code_thienkim_nhan->giftcode;
+														
+						}else{
+							$code = "Giftcode đã phát hết!";
+						}
+					}else{
+						$code = "Chưa đủ điểm nhận code";
+					}
+					break;	
+				case 4:
+					$code_bachkim 	= 5004;
+					$model 	= new GiftcodeModel();
+					$code_bachkim_nhan 	= $model->checkMemberIssetGiftcode($member_id,$code_bachkim);
+					if(!empty($code_bachkim_nhan)){
+						$code = $code_bachkim_nhan->giftcode;
+					}elseif($result_member_ngocrong>=215){
+						/** Code Pháp Sư Vô Thượng **/
+						if(empty($code_bachkim_nhan)){
+							$code_bachkim_nhan = $model->getActiveGiftcode($code_bachkim);
+							if(!empty($code_bachkim_nhan)){
+								$model->updateGiftcode($code_bachkim_nhan->id,$member_id);
+								$flag_buy_hero = $minigameModel->addBuyHero($member_id,1,215);
+							}
+						}
+						if(!empty($code_bachkim_nhan)){
+							$code = $code_bachkim_nhan->giftcode;				
+						}else{
+							$code = "Giftcode đã phát hết!";
+						}
+					}else{
+						$code = "Chưa đủ điểm nhận code";
+					}
+					break;
+				default:
+					$code = "Có lỗi xảy ra vui lòng liên hệ Admin!";
+			}
+			$member_point	= $minigameModel->getDiemByMemberId($member_id);
+			$member_point	= (int)$member_point;
+			$result_member_ngocrong 	= $minigameModel->getLongPhuongHoangByMemberId($member_id);
+			$member_ngocrong 		= (int)$result_member_ngocrong;	
+			return $this->jsonOut(false, 'success',[
+				'code'=>$code,
+				'member_point'=>$member_point,
+				'member_ngocrong'=>$member_ngocrong,
+				]);
+		}
+		else{
+			return $this->jsonOut(true, 'fail','Có lỗi xảy ra vui lòng liên hệ Admin!');
+		}
+		return $this->render('index', [
+			'code'=>$code
+		
+		]);
+	}
 	
 }
 ?>

@@ -18,7 +18,7 @@ class GiftcodeController extends Controller
 		$msg 		= "";
 		if(Yii::$app->user->isGuest){
 			$loginFlag = 1;
-			$msg = "Tiên nhân hãy đăng nhập để nhận Giftcode";
+			$msg = "Hãy đăng nhập để nhận Giftcode";
 			
 			if(\Yii::$app->mobileDetect->isMobile()){
 				 $this->layout = 'm_main';
@@ -33,13 +33,13 @@ class GiftcodeController extends Controller
 		$member_id 		= Yii::$app->user->identity->member_id;
 		
 		/** CODE THAN LONG 1 **/
-		$code_thanlong1 		= 3001;
+		$code_hoangkim1 		= 3001;
 		$model 					= new GiftcodeModel();
-		$code_thanlong1_nhan	= $model->checkMemberIssetGiftcode($member_id,$code_thanlong1);
-		if(empty($code_thanlong1_nhan)){
-			$code_thanlong1_nhan = $model->getActiveGiftcode($code_thanlong1);
-			if(!empty($code_thanlong1_nhan)){
-				$model->updateGiftcode($code_thanlong1_nhan->id,$member_id);
+		$code_hoangkim1_nhan	= $model->checkMemberIssetGiftcode($member_id,$code_hoangkim1);
+		if(empty($code_hoangkim1_nhan)){
+			$code_hoangkim1_nhan = $model->getActiveGiftcode($code_hoangkim1);
+			if(!empty($code_hoangkim1_nhan)){
+				$model->updateGiftcode($code_hoangkim1_nhan->id,$member_id);
 			}
 		}
 		
@@ -143,7 +143,7 @@ class GiftcodeController extends Controller
 		}
 		
 		return $this->render('index', [
-			'code_thanlong1_nhan'	=> $code_thanlong1_nhan,
+			'code_hoangkim1_nhan'	=> $code_hoangkim1_nhan,
 			'code_thanlong2_nhan'	=> $code_thanlong2_nhan,
 			'code_thanlong3_nhan'	=> $code_thanlong3_nhan,
 			'code_thanlong4_nhan'	=> $code_thanlong4_nhan,

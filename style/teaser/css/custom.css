@@ -1555,6 +1555,10 @@ h1 {
     filter: grayscale(100%);
 }
 
+.content-doiqua ul li .dc-img-1:hover>img {
+    filter: grayscale(100%);
+}
+
 .dc-tooltip {
     display: none;
     position: absolute;
@@ -1565,7 +1569,7 @@ h1 {
     z-index: 2;
 }
 
-.content-doiqua ul li .dc-img:hover .dc-tooltip {
+.content-doiqua ul li .dc-img-1:hover .dc-tooltip {
     display: block;
 }
 
@@ -1614,6 +1618,16 @@ h1 {
     transform: translate(-58%, -46%);
     max-width: 80%;
     width: 56%;
+}
+
+.pop-giftcode p,
+.popup-chua-giftcode p {
+    margin: unset
+}
+
+.pop-giftcode input {
+    padding: 5px 15px;
+    text-align: center;
 }
 
 

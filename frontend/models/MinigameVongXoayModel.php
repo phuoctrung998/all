@@ -1,6 +1,7 @@
 <?php
 namespace frontend\models;
 
+use common\models\Giftcode;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
@@ -239,7 +240,7 @@ class MinigameVongXoayModel extends \yii\db\ActiveRecord{
 		//$number_choi_matluot			= $this->countMatLuot($member_id); // lượt được thêm
 		
 		if($first_login_today){
-			$total_luotchoi += 15;
+			$total_luotchoi += 5;
 		}
 		if($number_sharefb_today >= 3){
 			$total_luotchoi += 0;
@@ -251,27 +252,6 @@ class MinigameVongXoayModel extends \yii\db\ActiveRecord{
 		$luotchoi_conlai = $total_luotchoi - $number_choi_today + $number_choi_themluot;
 		return $luotchoi_conlai;
 	}
-	
-	/**
-		Phần thưởng vòng xoay
-	**/
-	public function getPhanThuongVongXoay(){
-		return MinigameVongxoayReward::find()->all();
-	}
-	
-	public function getDiemByMemberId($member_id){
-		$sql = "
-			SELECT IFNULL(a.point,0) - IFNULL(b.point,0) as point FROM (
-			select IFNULL(SUM(point),0) as point,member_id from minigame_vongxoay_outcome where member_id = $member_id AND reward_id IN (1,2,3,4,5,6,7)
-			) a LEFT JOIN 
-			(
-				select IFNULL(SUM(point),0) as point,member_id from minigame_vongxoay_doithuong where member_id = $member_id
-			) b on a.member_id = b.member_id
-		";
-		return $data = Yii::$app->db
-            ->createCommand($sql)
-            ->queryScalar();
-	}
 	// Lịch sử triệu hồi ngọc
 	public function getLichSuNgocTrieuHoi($member_id)
 	{
@@ -281,7 +261,7 @@ class MinigameVongXoayModel extends \yii\db\ActiveRecord{
 		])->all();
 		return $models;
 	}
-	// Túi ngọc đã triệu hồi được
+	// Túi ngọc đã triệu hồi được //
 	public function countNgocTrieuHoi1($member_id)
 	{
 		$models = MinigameVongxoayOutcome::find('COUNT(reward_id)')->where('member_id = :member_id  AND reward_id = :reward_id' ,[
@@ -338,14 +318,68 @@ class MinigameVongXoayModel extends \yii\db\ActiveRecord{
 		])->all();
 		return $models;
 	}
+
+
+	/**
+		Phần thưởng vòng xoay
+	**/
+
+	public function getPhanThuongVongXoay(){
+		return MinigameVongxoayReward::find()->all();
+	}
+
+	public function getCode1(){
+		return Giftcode::find()->all();
+	}
 	
-	public function addBuyHero($member_id,$award_id,$point,$images,$name){
+	public function getDiemByMemberId($member_id){
+		$models = MinigameVongxoayOutcome::find('SUM(point)')->where('member_id = :member_id' ,[
+			'member_id' 	=> $member_id,
+		
+		])->all();
+		return $models;
+	}
+	/*
+	public function getLongPhuongHoangByMemberId($member_id){
+		$sql = "
+			SELECT IFNULL(SUM(point),0) as point FROM minigame_vongxoay_outcome where
+			reward_id IN (3,7)	AND
+			member_id = $member_id
+		";
+		return $data = Yii::$app->db
+            ->createCommand($sql)
+            ->queryScalar();
+	}
+	*/
+	/* Bảng xếp hạng long phuong hoang 
+	public function getTopLongPhuongHoangMemberLimit($limit){
+		$sql = "select IFNULL(SUM(point),0) as point,members.member_username FROM minigame_vongxoay_outcome 
+			INNER JOIN members ON members.member_id = minigame_vongxoay_outcome.member_id
+			WHERE
+			reward_id IN (3,7) 
+			AND DATE(create_time) BETWEEN '2020-03-31' AND '2020-04-06'
+			GROUP BY minigame_vongxoay_outcome.member_id ORDER BY point DESC LIMIT $limit ";
+		return $data = Yii::$app->db
+            ->createCommand($sql)
+            ->queryAll();
+	}
+	*/
+	
+	/* Bảng xếp hạng điểm 
+	public function getTopPointMemberLimit($limit){,
+		$sql = "Select members.member_username,IFNULL(SUM(point),0) as point from minigame_vongxoay_outcome 
+				INNER JOIN members ON members.member_id = minigame_vongxoay_outcome.member_id
+				GROUP BY minigame_vongxoay_outcome.member_id ORDER BY point DESC LIMIT $limit ";
+		return $data = Yii::$app->db
+            ->createCommand($sql)
+            ->queryAll();
+	}
+	*/
+	public function addBuyHero($member_id,$award_id,$point){
 		$model = new MinigameVongxoayDoithuong();
 		$model->member_id 	= $member_id;
 		$model->award_id	= $award_id;
 		$model->point		= $point;
-		$model->images 		= $images;
-		$model->$name		= $name;
 		$model->create_time	= date("Y-m-d H:i:s",time());
 		
 		if($model->save()){
@@ -367,5 +401,6 @@ class MinigameVongXoayModel extends \yii\db\ActiveRecord{
 		])->all();
 		return $models;
 	}
+	
 	
 }

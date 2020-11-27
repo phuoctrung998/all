@@ -347,7 +347,7 @@ var is_reload = false;
             $('.popup-box .tab:nth-child(' + $inDex + ')').addClass('active');
         });
         //  ===
-        $(".btn-doicode").click(function() {
+        $('body').delegate('.btn-doicode', 'click', function(e) {
             $('.popup-page04').fadeIn();
             $('#mask').fadeIn();
             $("body").addClass("no-scroll");
@@ -356,13 +356,14 @@ var is_reload = false;
             $(".popup-box .tab").removeClass('active');
             $(".popup-box .tab:nth-child(1)").addClass('active');
         });
-        $(".popup-thele .close-popup").click(function() {
+
+        $('body').delegate('.popup-thele .close-popup', 'click', function(e) {
             $('.popup-page04').fadeOut();
             $('#mask').fadeOut();
             $("body").removeClass("no-scroll");
         });
         //  ===
-        $(".btn-thele").click(function() {
+        $('body').delegate('.btn-thele', 'click', function(e) {
             $('.popup-page04').fadeIn();
             $('#mask').fadeIn();
             $("body").addClass("no-scroll");
@@ -377,7 +378,7 @@ var is_reload = false;
             $("body").removeClass("no-scroll");
         });
         //  ===
-        $(".btn-tuingoc").click(function() {
+        $('body').delegate('.btn-tuingoc', 'click', function(e) {
             $('.popup-page04').fadeIn();
             $('#mask').fadeIn();
             $("body").addClass("no-scroll");
@@ -386,14 +387,15 @@ var is_reload = false;
             $(".popup-box .tab").removeClass('active');
             $(".popup-box .tab:nth-child(4)").addClass('active');
         });
-        $(".popup-page04 .close-popup").click(function() {
+
+        $('body').delegate('.popup-page04 .close-popup', 'click', function(e) {
             $('.popup-page04').fadeOut();
             $('#mask').fadeOut();
             $("body").removeClass("no-scroll");
         });
 
         //  ===
-        $(".btn-lichsu").click(function() {
+        $('body').delegate('.btn-lichsu', 'click', function(e) {
             $('.popup-page04').fadeIn();
             $('#mask').fadeIn();
             $("body").addClass("no-scroll");
@@ -402,7 +404,8 @@ var is_reload = false;
             $(".popup-box .tab").removeClass('active');
             $(".popup-box .tab:nth-child(5)").addClass('active');
         });
-        $(".popup-bxh .close-popup").click(function() {
+
+        $('body').delegate('.popup-bxh .close-popup', 'click', function(e) {
             $('.popup-page04').fadeOut();
             $('#mask').fadeOut();
             $("body").removeClass("no-scroll");
@@ -437,14 +440,18 @@ var is_reload = false;
             $("body").removeClass("no-scroll");
         });
 
-        $(".popup-ketqua .close-kq").click(function() {
-            $('.popup-ketqua').fadeOut();
+
+
+
+        $(".popup-defaul.pop-giftcode .close-popup").click(function() {
+            $('.popup-defaul.pop-giftcode').fadeOut();
             $('#mask').fadeOut();
             $("body").removeClass("no-scroll");
         });
         // end: popup page 03 mini game
 
         // Begin: Popup Page 05
+
         $(".btn-datmoc").click(function() {
             $('.popup-defaul.popup-datmoc').fadeIn();
             $('#mask').fadeIn();
@@ -477,7 +484,7 @@ var is_reload = false;
         // End: Popup Page 05
 
         // Begin Count down
-        $('#clock').countdown('2020/1/1 10:00:00').on('update.countdown', function(event) {
+        $('#clock').countdown('2020/12/05 10:00:00').on('update.countdown', function(event) {
             var $this = $(this).html(event.strftime('' +
                 '<span>%-n<img src="style/teaser/images/day.png" alt="Siêu Xay Da"></span>' +
                 '<span>%H<img src="style/teaser/images/hours.png" alt="Siêu Xay Da"></span>' +

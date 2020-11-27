@@ -9,6 +9,7 @@
         var flagWin = 0;
         var flagAddLuot = false;
 
+        //Triệu hồi
         $('body').delegate('.btn-trieuhoi', 'click', function(e) {
 
             var loginFlag = $("#loginFlag").val();
@@ -34,8 +35,45 @@
             $('#vid-trieuhoi').trigger('play');
             setTimeout(function() {
                 quay();
-            }, 2000);
+            }, 2900);
         });
+
+        $('body').delegate('.minigame-doicode', 'click', function(e) {
+
+            var loginFlag = $("#loginFlag").val();
+            if (loginFlag == 0) { // chua dang nhap hien pop dang nhap
+                openlogin();
+                return false;
+            }
+            var id = $(this).data("id");
+            var csrf_params = $('meta[name=csrf-param]').prop('content');
+            var csrf_token = $('meta[name=csrf-token]').prop('content');
+            var data = {
+                csrf_params: csrf_token,
+                'id': id
+            }
+
+            handleChangecode(data, function(res) {
+                console.log(res);
+                if (!res.error) {
+                    $(".popup-page04").fadeOut();
+                    $('.pop-giftcode input').val(res.data);
+                    $('.pop-giftcode').fadeIn();
+                    $('#mask').fadeIn();
+                    $("body").addClass("no-scroll");
+                    return $('#giftcode-text').html('XXXX');
+                } else {
+                    $(".popup-page04").fadeOut();
+                    $('.popup-chua-datmoc p').html(res.data);
+                    $('.popup-chua-datmoc').fadeIn();
+                    $('#mask').fadeIn();
+                    $("body").addClass("no-scroll");
+                    return false;
+                }
+            });
+
+        });
+
         $('body').delegate('#ketqua_minigame .close-popup', 'click', function(e) {
 
             var csrf_params = $('meta[name=csrf-param]').prop('content');
@@ -48,7 +86,7 @@
             })
             $("#ketqua_minigame").fadeOut(200);
             $('#mask').fadeOut();
-        })
+        });
 
         $('body').delegate('.popup-ketqua .close-kq', 'click', function(e) {
             var csrf_params = $('meta[name=csrf-param]').prop('content');
@@ -66,7 +104,6 @@
 
 
     });
-
 
     /** TEASER **/
     $('body').delegate('.mangaplay-minigame-gcode', 'click', function(e) {
@@ -117,12 +154,8 @@ function quay() {
         handleChoi(data, function(res) {
             console.log(res);
             if (!res.error) {
-                $('.figure .d-none').css("display", "block");
-                $('.audio-popup').trigger("pause");
-                $('#ketqua-img').html('<img src="' + domain + res.data.images + '" alt="">');
+                $('#ketqua-img').html('<img src="' + domain + '/uploads/' + res.data.images + '" alt="">');
                 $('#ketqua').html(res.data.name);
-
-
 
                 setTimeout(function() {
                     $('.audio-game').trigger("pause");
@@ -232,7 +265,23 @@ function handlePage3(data, callback) {
  */
 
 
-
+function handleChangecode(data, callback) {
+    var params = data;
+    appAjax(
+        '/minigamevongxoay/doithuong',
+        'post',
+        params,
+        'json',
+        function(response) {
+            callback(response);
+            if (!response.error) {
+                console.log('success');
+            } else {
+                console.log('error', response);
+            }
+        }
+    );
+}
 
 function handleGiftcodeMinigame(data, callback) {
     var params = data;

@@ -86,10 +86,11 @@ class TeaserController extends FrontendController
 
 		$vongxoayModel = new MinigameVongXoayModel();
 
+	
 		//lịch sử triệu hồi ngọc
 		if(!Yii::$app->user->isGuest){
 		$lichsu = $vongxoayModel->getLichSuNgocTrieuHoi($member_id);
-
+		$code1 = $vongxoayModel->getDiemByMemberId($member_id);
 		// kết quả triệu hồi ngọc
 	
 		$ngoc1 = $vongxoayModel->countNgocTrieuHoi1($member_id);
@@ -101,15 +102,11 @@ class TeaserController extends FrontendController
 		$ngoc7 = $vongxoayModel->countNgocTrieuHoi7($member_id);
 		
 		
+		
 		return $this->render('index',[
 			'gg_login_url' 					=> $this->gg->createAuthUrl(),
 			'number_member_register_event'	=> $number_member_register_event,
-			'percent_number_register' 		=> $percent_number_register,
-			'noidunglebao_10trieu' 			=> $noidunglebao_10trieu,
-			'noidunglebao_thiensu' 			=> $noidunglebao_thiensu,
-			'noidunglebao_kysidianguc' 		=> $noidunglebao_kysidianguc,
-			'noidunglebao_thanthutrouy' 	=> $noidunglebao_thanthutrouy,
-			'huongdan_lacxingau'			=> $huongdan_lacxingau,
+			'percent_number_register' 		=> $percent_number_register,		
 			'url_choingay'					=> $url_choingay,
 			'num_luotchoi' 					=> $num_luotchoi,
 			'arrayMemberHero'				=> $arrayMemberHero,
@@ -122,7 +119,9 @@ class TeaserController extends FrontendController
 			'ngoc4'							=> $ngoc4,
 			'ngoc5'							=> $ngoc5,
 			'ngoc6'							=> $ngoc6,
-			'ngoc7'							=> $ngoc7
+			'ngoc7'							=> $ngoc7,
+
+			'code1'							=> $code1
 				
 			
 		]);
@@ -130,12 +129,7 @@ class TeaserController extends FrontendController
 			return $this->render('index',[
 				'gg_login_url' 					=> $this->gg->createAuthUrl(),
 				'number_member_register_event'	=> $number_member_register_event,
-				'percent_number_register' 		=> $percent_number_register,
-				'noidunglebao_10trieu' 			=> $noidunglebao_10trieu,
-				'noidunglebao_thiensu' 			=> $noidunglebao_thiensu,
-				'noidunglebao_kysidianguc' 		=> $noidunglebao_kysidianguc,
-				'noidunglebao_thanthutrouy' 	=> $noidunglebao_thanthutrouy,
-				'huongdan_lacxingau'			=> $huongdan_lacxingau,
+				'percent_number_register' 		=> $percent_number_register,				
 				'url_choingay'					=> $url_choingay,
 				'num_luotchoi' 					=> $num_luotchoi,
 				'arrayMemberHero'				=> $arrayMemberHero,
