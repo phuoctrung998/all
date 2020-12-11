@@ -142,7 +142,54 @@ $userRole 		= key($objUserRole);
 				</ul>
 			</div>
 		</li>
+		<li class="m-menu__section">
+			<h4 class="m-menu__section-text">
+				CẤU HÌNH CỔNG NẠP
+			</h4>
+			<i class="m-menu__section-icon flaticon-more-v3"></i>
+		</li>
 		
+		<li class="m-menu__item  m-menu__item" aria-haspopup="true" >
+			<a  href="<?= Yii::$app->urlManager->createAbsoluteUrl('paymentpartner/index'); ?>" class="m-menu__link ">
+				<i class="m-menu__link-icon flaticon-share"></i>
+				<span class="m-menu__link-title">
+					<span class="m-menu__link-wrap">
+						<span class="m-menu__link-text">
+							Danh sách cổng nạp
+						</span>
+						<i class="m-menu__ver-arrow la la-angle-right"></i>
+					</span>
+				</span>
+			</a>
+		</li>
+		
+		<li class="m-menu__item  m-menu__item" aria-haspopup="true" >
+			<a  href="<?= Yii::$app->urlManager->createAbsoluteUrl('paymenttype/index'); ?>" class="m-menu__link ">
+				<i class="m-menu__link-icon flaticon-share"></i>
+				<span class="m-menu__link-title">
+					<span class="m-menu__link-wrap">
+						<span class="m-menu__link-text">
+							Danh sách loại thẻ nạp
+						</span>
+						<i class="m-menu__ver-arrow la la-angle-right"></i>
+					</span>
+				</span>
+			</a>
+		</li>
+		
+		<li class="m-menu__item  m-menu__item" aria-haspopup="true" >
+			<a  href="<?= Yii::$app->urlManager->createAbsoluteUrl('paymenttypelist/index'); ?>" class="m-menu__link ">
+				<i class="m-menu__link-icon flaticon-share"></i>
+				<span class="m-menu__link-title">
+					<span class="m-menu__link-wrap">
+						<span class="m-menu__link-text">
+							Thẻ nạp theo Đối Tác
+						</span>
+						<i class="m-menu__ver-arrow la la-angle-right"></i>
+					</span>
+				</span>
+			</a>
+		</li>
 		
 		<li class="m-menu__item  m-menu__item" aria-haspopup="true" >
 			<a  href="<?= Yii::$app->urlManager->createAbsoluteUrl('mkt/index'); ?>" class="m-menu__link ">

@@ -28,7 +28,29 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'name',
             'code',
-            'status',
+            [
+				'attribute' => 'status',
+				'format'	=> 'raw',
+				'value'		=> function($model){
+                    if($model->status == 1){
+                         $html = "<span class='m-switch m-switch--success'>
+                            <label>
+                                <input type='checkbox' checked='checked' name=''/>
+                                <span></span>
+                            </label>
+                        </span>";
+                    }else{
+                        $html = "<span class='m-switch m-switch--success'>
+                        <label>
+                            <input type='checkbox' name=''/>
+                            <span></span>
+                        </label>
+                    </span>";     
+                    }    
+                    return $html;
+					
+				}
+			],  
             'create_time:datetime',
             //'update_time:datetime',
 

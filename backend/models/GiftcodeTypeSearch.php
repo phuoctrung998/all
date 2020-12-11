@@ -2,6 +2,7 @@
 
 namespace backend\models;
 
+use common\models\Giftcode;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\GiftcodeType;
@@ -21,6 +22,7 @@ class GiftcodeTypeSearch extends GiftcodeType
             [['name'], 'safe'],
         ];
     }
+
 
     /**
      * {@inheritdoc}

@@ -33,6 +33,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'member_id',
             'flag_win',
             'reward_id',
+            'name',
+            'images',
             'create_time',
         ],
     ]) ?>

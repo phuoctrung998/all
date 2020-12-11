@@ -111,19 +111,24 @@ $this->params['breadcrumbs'][] = $this->title;
 			],
 			[
 				'attribute' => 'server_status',
-				'format'	=> 'html',
+				'format'	=> 'raw',
 				'value'		=> function($model){
-					if ($model->server_status==1){
-						return "<span class='btn btn-success btn-sm'>Mở</span>";
-					}elseif($model->server_status==2){
-						return "<span class='btn btn-warning m-btn--wide'>Bảo trì</span>";
-					}elseif($model->server_status==3){
-						return "<span class='btn btn-danger m-btn--wide'>Đông người</span>";
-					}elseif($model->server_status==4){
-						return "<span class='btn btn-danger m-btn--wide'>Đầy</span>";
-					}else{
-						return "<span class='btn btn-metal m-btn--wide'>Đóng</span>";
-					}
+					 if($model->server_status == 1){
+                         $html = "<span class='m-switch m-switch--success'>
+                            <label>
+                                <input type='checkbox'  checked='checked' name='toggle' id='toggle'/>
+                                <span></span>
+                            </label>
+                        </span>";
+                    }else{
+                        $html = "<span class='m-switch m-switch--success'>
+                        <label>
+                            <input type='checkbox'  name=''/>
+                            <span></span>
+                        </label>
+                    </span>";     
+                    }    
+                    return $html;
 				}
 			],
 			

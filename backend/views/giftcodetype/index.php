@@ -32,16 +32,19 @@ $this->params['breadcrumbs'][] = $this->title;
 													</span>
 												</span>', ['create'], ['class' => 'btn btn-primary m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill']) ?>
 								</div>
-							</div>
+				</div>
 				<div class="m-portlet__body">
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+        'columns' => [ 
+			['class' => 'yii\grid\SerialColumn'],
+			
             'name',
-            'code',
+			'code',
+			
+			
             [
 				'attribute' => 'status',
 				'value'		=> function($model){
@@ -52,15 +55,20 @@ $this->params['breadcrumbs'][] = $this->title;
 					}
 				}
 			],
+			'status_use',
             'create_time:datetime',
             //'update_time:datetime',
 
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
+			['class' => 'yii\grid\ActionColumn'],
+			
+		],
+		
+	]); ?>
+	
+	
 </div>
 </div>
-	</div>
+</div>
 </div>
 </div>
 

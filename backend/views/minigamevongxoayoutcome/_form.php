@@ -17,6 +17,10 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'flag_win')->textInput() ?>
 
     <?= $form->field($model, 'reward_id')->textInput() ?>
+    
+    <?= $form->field($model, 'name')->textInput() ?>
+
+    <?= $form->field($model, 'images')->textInput() ?>
 
     <?= $form->field($model, 'create_time')->textInput() ?>
 

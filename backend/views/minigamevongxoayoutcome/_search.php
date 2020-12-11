@@ -22,6 +22,10 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'flag_win') ?>
 
     <?= $form->field($model, 'reward_id') ?>
+    
+    <?= $form->field($model, 'name') ?>
+
+    <?= $form->field($model, 'images') ?>
 
     <?= $form->field($model, 'create_time') ?>
 
